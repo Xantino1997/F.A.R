@@ -114,12 +114,13 @@
     position: relative;
     height: 400px;
     overflow: hidden;
+    display:flex;
   }
 
   .carousel-item-index {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 90%;
     top: 0;
     left: 100%;
     margin-left: 0%;
@@ -127,7 +128,25 @@
     transition: opacity 1.5s, left 1.6s;
     background-repeat: no-repeat;
     background-position: center;
+   
   }
+
+  .select-image-div{
+    position:absolute;
+    display:flex;
+    flex-direction: row;
+    width: 97%;
+    height:11%;
+  }
+  .select-image {
+    border: 3px solid #ccc;
+    width: 90px; /* Tamaño fijo */
+    height:60px; /* Tamaño fijo */
+    margin: 5px; /* Espacio entre las imágenes */
+    margin-top: 15px; /* Espacio entre las imágenes */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+  }
+  
 
   .carousel-item-index.active {
     opacity: 1;
