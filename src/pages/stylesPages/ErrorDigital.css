@@ -1,0 +1,39 @@
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ddd;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    font-size: 28px;
+    color: #f00003;
+  }
+  
+  img {
+    width: 300px;
+    margin: 10px 0;
+  }
+  
+  h3 {
+    font-size: 18px;
+    color: #f00003;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,132 @@
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+.conteiner-buscador {
+  align-items: center;
+  text-align: center;
+}
+
+.productos-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-naranja)
+}
+
+.producto {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+  max-width: 20%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-blanco);
+
+}
+
+.producto h3 {
+  margin: 0;
+}
+
+.producto img {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Estilos del modal de SweetAlert2 */
+.swal2-popup {
+  max-width: 600px;
+  text-align: left;
+}
+
+.swal2-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.swal2-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.swal2-html-container {
+  font-size: 16px;
+}
+
+.swal2-confirm-button {
+  background-color: #25d366;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.swal2-close {
+  font-size: 24px;
+  color: #333;
+  background: none;
+}
+
+/* Estilos del botón WhatsApp */
+.producto button:nth-child(2) {
+  background-color: #25d366;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Estilos para el botón de búsqueda */
+input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin:15px;
+}
+
+/* Estilos para el botón de búsqueda y el botón "Ampliar" */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos de paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.pagination button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.page-number {
+  margin: 0 10px;
+  font-weight: bold;
+}

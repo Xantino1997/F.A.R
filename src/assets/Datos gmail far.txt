@@ -1,0 +1,4 @@
+email: farenergetica@gmail.com
+password: farenergetica2023@
+tel recuperacion: ali
+correo recuperacion: devprueba.2022@gmail.com

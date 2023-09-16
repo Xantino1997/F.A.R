@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import IndexPage from './pages/IndexPage';
+import About from './pages/About';
+import Servicios from './pages/Servicios';
+import Contactanos from './pages/Contactanos';
+import Productos from './pages/Productos';
+import Copyright from './Copyright';
+import Layout from './Layout';
+import ErrorDigital from './pages/ErrorDigital';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<IndexPage />} />
+          <Route path="/nosotros" element={<About />} />
+          <Route path="/contactanos" element={<Contactanos />} />
+          <Route path="/productos" element={<Productos />} />
+          <Route path="/servicios" element={<Servicios />} />
+          <Route path="/copyright" element={<Copyright />} />
+          <Route path="*" element={<ErrorDigital />} /> {/* Ruta comodín para cualquier ruta no definida */}
+
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
