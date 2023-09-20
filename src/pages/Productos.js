@@ -47,7 +47,7 @@ const Productos = () => {
       confirmButtonColor: "#25d366",
       html: `
         <p>Descripción del producto:</p>
-        <p>Inserta aquí la descripción del producto.</p>
+        <p>Aca iria la descripción del producto.</p>
       `,
     }).then((result) => {
       if (result.isConfirmed) {
