@@ -28,7 +28,6 @@ const serviciosData = [
 function Servicios() {
   return (
     <div className="servicios-container">
-      <h1 className="titulo">Área de Servicios</h1>
       <div className="servicios-list">
         {serviciosData.map((servicio, index) => (
           <div className="servicio" key={index}>
