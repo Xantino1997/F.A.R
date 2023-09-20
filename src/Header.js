@@ -94,6 +94,7 @@ function Header() {
     <header className="header">
       <div className="logo">
         <img className="logo-img" alt="Logo" src={logo} />
+        <h3 className="logo-titulo">Brindamos soluciones</h3>
       </div>
 
       <nav className={`menu ${isMenuOpen ? "active" : ""}`}>
