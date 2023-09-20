@@ -30,15 +30,103 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding:20px;
     width: 30%;
     height: 40%;
     text-align: center;
     color: #333;
-    background-color: #fff;
+    background-color:var(--color-naranja);
     z-index: 1;
   }
-  
+  .contacto-info h3 {
+    padding:2px;
+    background-color:#000;
+    color: var(--color-naranja);  
+  }
+.gmail-container{
+  background-color:#fff;
+  text-align:center;
+  display:flex;
+  justify-content:space-around;
+  color:var(--color-naranja);
+  font-weight:bold;
+  padding:10px;
+  margin:5px;
+}
+.direccion-container{
+  background-color:#fff;
+  text-align:center;
+  display:flex;
+  justify-content:space-around;
+  color:var(--color-naranja);
+  font-weight:bold;
+  padding:10px;
+  margin:5px;
+}
+.telefono-container{
+  background-color:#fff;
+  text-align:center;
+  display:flex;
+  justify-content:space-around;
+  color:var(--color-naranja);
+  font-weight:bold;
+  padding:10px;
+  margin:5px;
+}
+
   .contacto-info p {
     margin: 10px 0;
   }
   
+
+  @media (max-width: 767px) {
+    .contacto-info {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding:20px;
+      width: 100%;
+      height: 40%;
+      text-align: center;
+      color: #333;
+      background-color:var(--color-naranja);
+      z-index: 1;
+    }
+    .contacto-info h3 {
+      padding:2px;
+      background-color:#000;
+      color: var(--color-naranja);  
+    }
+  .gmail-container{
+    background-color:#fff;
+    text-align:center;
+    display:flex;
+    justify-content:space-around;
+    color:var(--color-naranja);
+    font-weight:bold;
+    padding:10px;
+    margin:5px;
+  }
+  .direccion-container{
+    background-color:#fff;
+    text-align:center;
+    display:flex;
+    justify-content:space-around;
+    color:var(--color-naranja);
+    font-weight:bold;
+    padding:10px;
+    margin:5px;
+  }
+  .telefono-container{
+    background-color:#fff;
+    text-align:center;
+    display:flex;
+    justify-content:space-around;
+    color:var(--color-naranja);
+    font-weight:bold;
+    padding:10px;
+    margin:5px;
+  }
+
+  }
