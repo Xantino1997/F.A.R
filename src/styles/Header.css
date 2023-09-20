@@ -12,8 +12,7 @@
   --color-black: #000;
 }
 .header {
-  background-color:var(--color-naranja); 
-  /* background-color: #edd642; */
+  background-color: var(--color-naranja);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -39,19 +38,37 @@
 
 .logo {
   background: transparent;
-  opacity: 0.9; 
+  opacity: 0.9;
   align-items: center;
-  text-align: center;
-  padding: 2px;
-  width: 10em;
-  height: 5em;
+  display:flex;
+  flex-direction: column;
+  width: 12em;
+  height: 6em;
 }
 .logo-img {
-  width: 100%;
-  height:100%;
-  opacity:1; 
+  width: 10%;
+  height: 12%;
+  opacity: 1;
+  position: absolute;
+  top: 10px;
+}
+.logo-titulo {
+  top: 90px;
+  position: absolute;
+  color: #fff;
+  margin-bottom: 10px;
+  opacity: 0; /* Inicialmente invisible */
+  animation: encender 2s ease-in-out forwards; /* Nombre de la animación, duración, temporización y retención final */
 }
 
+@keyframes encender {
+  0% {
+    opacity: 0; /* Al principio, completamente invisible */
+  }
+  100% {
+    opacity: 1; /* Al final, completamente visible */
+  }
+}
 
 .menu {
   margin-top: 10px;
@@ -70,7 +87,7 @@
 }
 
 .menu ul li a {
-  color: white;
+  color: var(--color-blanco);
   text-decoration: none;
   padding: 8px;
   border-radius: 15px;
@@ -128,10 +145,7 @@
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Ocultar la imagen cuando se haga hover */
-/* .autor-info-header-img:hover {
-  opacity: 0;
-} */
+
 
 .autor-info-header-parrafo {
   border-radius: 5px;
@@ -146,15 +160,30 @@
     flex-direction: row;
     justify-content: center;
   }
-
+  .logo {
+    background: transparent;
+    opacity: 0.9;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    width: 15em;
+    height: 6em;
+  }
+  .logo-img {
+    width: 40%;
+    height: 13%;
+    opacity: 1;
+    position: absolute;
+    top: 10px;
+  }
   /* Estilos para el botón del menú */
   .btn-menu-header {
     display: flex;
     position: absolute;
     top: 10px;
     margin-left: 10px;
-    color: #fff;
-    background-color: blue;
+    color: var(--color-naranja);
+    background-color: white;
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -163,10 +192,10 @@
   .btn-menu-header-open {
     position: absolute;
     top: 20px;
-    color: #fff;
+    color: var(--color-naranja);
     right: 20px;
     display: flex;
-    background-color: blue;
+    background-color: white;
     padding: 10px;
     height: 50px;
     border: none;
@@ -269,19 +298,19 @@
 
   .menu ul li a {
     position: relative;
-    background: blue;
+    background: white;
     width: 100%;
     height: 100%;
     font-size: 12px;
-    color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    color: #fff !important;
+    color: var(--color-naranja);
   }
 
   .menu ul li a:hover {
     text-decoration: underline;
-    background-color: lightblue;
+    background-color: orange;
+    color: var(--color-blanco);
   }
 
   .autor-info-header {
