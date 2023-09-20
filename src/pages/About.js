@@ -6,11 +6,16 @@ function Nosotros() {
   return (
     <>
       <div className="container-sin-contenido">
-        <p className="container-sin-contenido-parrafo">No se puede mostrar contenido</p>
+        <p className="container-sin-contenido-parrafo">
+          No se puede mostrar contenido
+        </p>
       </div>
       <div className="nosotros-container">
+        <div className="imagen-container">
+          <img src={personalImage} alt="Personal" className="imagen-personal" />
+        </div>
         <div className="nosotros-info">
-          <h1>
+          <h1 className="nosotros-info-titulo">
             <span className="bold-text">F.A.R Servicios</span>
           </h1>
           <p>
@@ -21,9 +26,6 @@ function Nosotros() {
             enfoque en la innovación y la sostenibilidad, siempre priorizando la
             satisfacción de nuestros clientes.
           </p>
-        </div>
-        <div className="imagen-container">
-          <img src={personalImage} alt="Personal" className="imagen-personal" />
         </div>
       </div>
     </>
