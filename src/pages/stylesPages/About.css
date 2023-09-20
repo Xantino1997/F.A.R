@@ -8,11 +8,10 @@
 .nosotros-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
   margin: 20px;
-  background-color: var(--color-naranja);
-  filter: grayscale(35%); /* Aplica escala de grises al 100% */
+  background-color:#ddd;
   text-align: center;
 }
 
@@ -20,20 +19,18 @@
   flex: 1;
   padding: 20px;
   margin: 15px;
-  top: 1%;
-  color: var(--color-blanco);
+  color:var(--color-naranja);
   height: 100%;
   width: 100%;
-}
-
-h1 {
-  font-size: 24px;
-  top: 0;
-}
-
-.bold-text {
   font-weight: bold;
 }
+
+.nosotros-info-titulo {
+  font-size: 24px;
+  color: #fff;
+  background-color:var(--color-naranja);
+}
+
 
 .imagen-container {
   flex: 1;
@@ -43,12 +40,15 @@ h1 {
 }
 
 .imagen-personal {
-  width: 100%;
+  width: 95%;
   height: 100%;
   object-fit: cover;
   opacity: 0;
   animation: aparecer 2s forwards; /* Agrega la animación de crecimiento */
   filter: grayscale(100%); /* Aplica escala de grises al 100% */
+}
+.bold-text {
+  font-weight: bold;
 }
 
 @keyframes aparecer {
@@ -182,7 +182,7 @@ h1 {
     margin-left: 0px;
     left: 0;
     width: 100%;
-    background-color: var(--color-naranja);
+    background-color:#ddd;
     filter: grayscale(35%); /* Aplica escala de grises al 100% */
     text-align: center;
   }
