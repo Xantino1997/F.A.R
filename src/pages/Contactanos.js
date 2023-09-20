@@ -13,12 +13,18 @@ const Contacto = () => {
         </video>
       </div>
       <div className="contacto-info">
+        <div className="gmail-container">
           <h3>Gmail:</h3>
           <p> correo@gmail.com</p>
+        </div>
+        <div className="direccion-container">
           <h3>Dirección:</h3>
           <p>123 Calle Principal</p>
+        </div>
+        <div className="telefono-container">
           <h3>Teléfono:</h3>
           <p> (123) 456-7890</p>
+        </div>
       </div>
     </div>
   );
