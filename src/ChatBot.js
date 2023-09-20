@@ -76,7 +76,7 @@ function Chatbot() {
           <p style={{ color: "#333 " }}>
             Hola, ¿cómo estás? Bienvenido. ¡Encantado de ayudarte!
           </p>
-          <p style={{ color: "#222" }}>Responde:</p>
+          <p style={{ color: "#222" }}>Responde con una de las siguientes opciones:</p>
           <ul>
             <li>Trabajos</li>
             <li>redes</li>
@@ -95,7 +95,7 @@ function Chatbot() {
             botResponse = (
               <>
                 <div className="div-respuesta-bot">
-                  mira estos enlaces para ver si te sirven:
+                  Mira estos enlaces para ver si te sirven:
                   <ul>
                     <li>
                     <a href="/productos">Productos</a>
@@ -109,7 +109,7 @@ function Chatbot() {
                   </ul>
                 </div>
                 <div style={{ backgroundColor: "#eee", padding: "10px" }}>
-                  <p style={{ color: "#333" }}>Responde:</p>
+                  <p style={{ color: "#333" }}>O responde:</p>
                   <ul>
                     <li>Trabajos</li>
                     <li>redes</li>
@@ -136,7 +136,7 @@ function Chatbot() {
                   </ul>
                 </div>
                 <div style={{ backgroundColor: "#eee", padding: "10px" }}>
-                  <p style={{ color: "#333" }}>Responde:</p>
+                  <p style={{ color: "#333" }}> O responde:</p>
                   <ul>
                     <li>Trabajos</li>
                     <li>redes</li>
