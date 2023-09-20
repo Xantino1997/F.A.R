@@ -243,5 +243,42 @@
   animation: wave 1.5s infinite;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .chatbot-container {
+    width: 58%;
+    height: 100%;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #000;
+    padding: 5px;
+  }
+  .chatbot-toggle img {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    color: transparent;
+    z-index: -2;
+    border-radius: 50%;
+    animation: vibrating 2s infinite alternate;
+    border: 4px solid var(--color-verde);
+  }
+  
+  
 }
