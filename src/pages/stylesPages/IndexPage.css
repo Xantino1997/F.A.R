@@ -136,7 +136,7 @@
     flex-direction: row;
     width: 90%;
     height:11%;
-    bottom:-40px;
+    bottom:-100px;
   }
   .select-image {
     border: 3px solid #ccc;
