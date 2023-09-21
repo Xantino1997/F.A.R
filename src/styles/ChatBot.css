@@ -246,7 +246,7 @@
   .chatbot {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right:0px;
     height: 60px;
     border-radius: 50%;
     display: flex;

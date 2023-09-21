@@ -34,44 +34,64 @@
     width: 30%;
     height: 40%;
     text-align: center;
+    display:flex;
+    flex-direction: column;
     color: #333;
-    background-color:var(--color-naranja);
+    background-color:transparent;
     z-index: 1;
   }
-  .contacto-info h3 {
-    padding:2px;
-    background-color:#000;
-    color: var(--color-naranja);  
+  .icon {
+    padding:15px;
+    background-color:var(--color-naranja);
+    margin-right:10px;
+    width:10%;
+    height:15%;
+    color: var(--color-blanco);  
+    border-radius:50%;
+    left:15px;
+    position:absolute;
   }
 .gmail-container{
   background-color:#fff;
-  text-align:center;
+  text-align: center;
+  align-items: center;
   display:flex;
   justify-content:space-around;
   color:var(--color-naranja);
   font-weight:bold;
   padding:10px;
+  height:25px;
   margin:5px;
+  margin-top:10px;
+  margin-bottom:20px;
 }
 .direccion-container{
   background-color:#fff;
-  text-align:center;
+  text-align: center;
+  align-items: center;
   display:flex;
   justify-content:space-around;
   color:var(--color-naranja);
   font-weight:bold;
   padding:10px;
+  height:25px;
   margin:5px;
+  margin-top:30px;
+  margin-bottom:20px;
 }
 .telefono-container{
   background-color:#fff;
-  text-align:center;
+  text-align: center;
+  align-items: center;
   display:flex;
   justify-content:space-around;
   color:var(--color-naranja);
   font-weight:bold;
   padding:10px;
+  height:25px;
   margin:5px;
+  margin-top:30px;
+  margin-bottom:50px;
 }
 
   .contacto-info p {
@@ -79,7 +99,7 @@
   }
   
 
-  @media (max-width: 767px) {
+  @media (min-width: 120px) and (max-width: 767px) {
     .contacto-info {
       position: absolute;
       top: 50%;

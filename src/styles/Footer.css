@@ -113,7 +113,7 @@
 }
 
 /* Media Query para pantallas pequeñas, como smartphones */
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 120px) and (max-width: 767px) {
   
   .footer .copyright {
     background-color: #000;
