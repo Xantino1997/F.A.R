@@ -8,6 +8,7 @@ import logo from "./assets/farservicios.png";
 import { UserContext } from "./UserContext";
 import { useContext } from "react";
 
+
 function Header() {
   const navigate = useNavigate();
   const { setUserInfo, userInfo } = useContext(UserContext);
