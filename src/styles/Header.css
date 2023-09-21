@@ -193,7 +193,10 @@
   padding-right: 16px;
 }
 
-/* Media Query para pantallas pequeñas, como smartphones */
+
+
+
+/* Media Query para pantallas pequeñas, como smartphones------------------------------------------------------------------- */
 @media screen and (min-width: 120px) and (max-width: 767px) {
   .header {
     background-color:red;
@@ -219,7 +222,7 @@
   height: 8em;
   margin-top: -20px;
   margin-bottom: -20px;
-  margin-left: -90px;
+  margin-left: -215px;
   position: relative; /* Añadir posición relativa para que los pseudo-elementos sean relativos a este contenedor */
 }
 .links-header-ul {
@@ -227,7 +230,6 @@
   width: 100%;
   height: 80%;
   padding-top:15px;
-  width: 100%;
   top:0px;
   z-index: 999; /* Asegura que el elemento tenga un z-index */
   position: relative; /* Establece una posición relativa */
@@ -256,17 +258,17 @@
   left: 1%;
 }
 .logo-titulo {
-  width: 90%;
-  height:4%;
+  width: 50%;
+  height:2.3%;
   background:white;
   opacity: 1;
   position: absolute;
-  top:722px;
+  top:1275px;
   z-index:0;
   color: #000;
-  font-size:20px;
+  font-size:15px;
   border-radius:5px;
-  left: 5%;
+  left: 25%;
   animation: encender 2s ease-in-out forwards; /* Nombre de la animación, duración, temporización y retención final */
 }
 
@@ -293,7 +295,8 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    color:red;
+    color:white;
+    font-weight: bold;
     z-index:5000;
   }
   .btn-menu-header-open {
@@ -317,12 +320,13 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height:100vh;
+    height:160%;
     display: block;
     top: 0%;
+    left: 0%;
     position: absolute;
     margin: 0 auto;
-    border: 10px solid yellow;
+    border: 10px solid orange;
     background: rgba(0, 0, 0, 0.8);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     z-index: 15;
@@ -409,10 +413,11 @@
     position: relative;
     background: white;
     width: 100%;
-    height: 100%;
-    font-size: 12px;
+    height: 50%;
+    font-size: 16px;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
     color:red;
   }
 
@@ -436,8 +441,8 @@
   }
 }
 
-/* Media Query para pantallas medianas, como tablets */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+/* Media Query para pantallas pequeñas, como smartphones------------------------------------------------------------------- */
+@media screen and (min-width: 767px) and (max-width: 867px){
   .header {
     background-color:red;
     display: flex;
@@ -478,176 +483,18 @@
     height: 8em;
     margin-top: -20px;
     margin-bottom: -20px;
-    margin-left: -20px;
+    margin-left: -2px;
     position: relative; /* Añadir posición relativa para que los pseudo-elementos sean relativos a este contenedor */
   }
   .links-header-ul {
     background: white;
-    width: 100%;
     height: 80%;
     padding-top:15px;
-    padding-left:15px;
-    width: 100%;
+    padding-left:10px;
+    width: 95%;
     top:-20px;
-    z-index: 999; /* Asegura que el elemento tenga un z-index */
-    position: relative; /* Establece una posición relativa */
-  }
-  
-  /* Pseudo-elemento para crear el efecto de corte en el margen derecho */
-  .logo::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -108px;
-    width: 110px;
-    height: 100%;
-    background-color: red;
-    transform: skewX(40deg);
-    transform-origin: bottom;
-    z-index: 1; /* Asegura que el pseudo-elemento tenga un z-index inferior */
-  }
-  
-  
-  
-  .logo-img {
-    width: 50%;
-    height:15em;
-    opacity: 1;
-    position: absolute;
-    top: -80px;
-  }
-  .logo-titulo {
-    top: 65px;
-    position: absolute;
-    text-align: center;
-    width: 45%;
-    color: #000;
-    margin-bottom: 10px;
-    opacity: 0; /* Inicialmente invisible */
-    animation: encender 2s ease-in-out forwards; /* Nombre de la animación, duración, temporización y retención final */
-  }
-  
-  /* Estilos para el menú */
-  .menu {
-    display: flex;
-    width: 100%;
-    font-size: 15px;
-  }
-
-  .menu ul {
+    margin-right: 12px;
     font-size: 13px;
-  }
-
-  .menu ul li {
-    font-size: 14px;
-  }
-
-  .autor-info-header {
-    border: solid 1px blue;
-    height: 150px;
-    max-width: 100px;
-  }
-
-  .autor-info-header-img {
-    height: 50px;
-    width: 50px;
-  }
-
-  .autor-info-header-register {
-    color: #fff !important;
-    border: 1px solid #000;
-    padding: 5px;
-    text-decoration: none;
-    border-radius: 15px;
-  }
-  .autor-info-header-register:hover {
-    color: #fff;
-    border: 1px solid #000;
-    padding: 5px;
-    text-decoration: underline;
-    border-radius: 15px;
-  }
-
-  .menu ul li a {
-    color: #fff !important;
-  }
-
-  .menu ul li a:hover {
-  }
-
-  .autor-info-header {
-    top: 1px; /* Ajustar la posición vertical del pseudo-elemento cuando se hace hover en pantallas pequeñas */
-    width: 100%; /* Ajustar el ancho del contenedor de información del autor en pantallas pequeñas */
-    font-size: 12px; /* Ajustar el tamaño de fuente del contenedor de información del autor en pantallas pequeñas */
-  }
-
-  .autor-info-header:hover::before {
-    width: 80px; /* Ajustar el ancho del pseudo-elemento cuando se hace hover en pantallas pequeñas */
-    height: 100px; /* Ajustar el alto del pseudo-elemento cuando se hace hover en pantallas pequeñas */
-    top: 30px; /* Ajustar la posición vertical del pseudo-elemento cuando se hace hover en pantallas pequeñas */
-    font-size: 10px; /* Ajustar el tamaño de fuente del pseudo-elemento cuando se hace hover en pantallas pequeñas */
-  }
-
-  .logo-img {
-    max-width: 80px;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-}
-
-/* Media Query para pantallas grandes, como computadoras de escritorio */
-@media screen and (min-width: 1024px) {
-  .header {
-    background-color:red;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
-    width: 100%;
-    z-index: 9;
-    font-family: "Amatic SC", cursive;
-    font-family: "Roboto Condensed", sans-serif;
-  }
-  .links-header-ul{
-    background:white;
-    width: 100%;
-    height: 100%;
-    z-index:999;
-  }
-  .autor-info-header-register {
-    top: 30px;
-  }
-  
-  .btn-menu-header {
-    display: none;
-  }
-  
-  .btn-menu-header-open {
-    display: none;
-  }
-  
-  .logo {
-    background:var(--color-naranja);
-    opacity: 0.9;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 8em;
-    margin-top: -20px;
-    margin-bottom: -20px;
-    margin-left: -20px;
-    position: relative; /* Añadir posición relativa para que los pseudo-elementos sean relativos a este contenedor */
-  }
-  .links-header-ul {
-    background: white;
-    width: 100%;
-    height: 80%;
-    padding-top:15px;
-    padding-left:15px;
-    width: 100%;
-    top:-20px;
     z-index: 999; /* Asegura que el elemento tenga un z-index */
     position: relative; /* Establece una posición relativa */
   }
@@ -665,8 +512,6 @@
     transform-origin: bottom;
     z-index: 1; /* Asegura que el pseudo-elemento tenga un z-index inferior */
   }
-  
-  
   
   .logo-img {
     width: 50%;
@@ -686,23 +531,98 @@
     animation: encender 2s ease-in-out forwards; /* Nombre de la animación, duración, temporización y retención final */
   }
   
+  @keyframes encender {
+    0% {
+      opacity: 0; /* Al principio, completamente invisible */
+    }
+    100% {
+      opacity: 1; /* Al final, completamente visible */
+    }
+  }
+  
+  .menu {
+    margin-top: 10px;
+    color:#000;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
   .menu ul li {
-    margin-right: 30px; /* Ajustar el margen entre los elementos del menú en pantallas grandes */
+    font-weight: bold;
+    margin-right: 30px;
   }
-
+  
+  .menu ul li a {
+    color: var(--color-black);
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 15px;
+  }
+  
+  .menu ul li a:hover {
+    text-decoration: underline;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
   .autor-info-header {
-    width: 100px; /* Ajustar el ancho del contenedor de información del autor en pantallas grandes */
-    font-size: 16px; /* Ajustar el tamaño de fuente del contenedor de información del autor en pantallas grandes */
+    border: 1px solid #ccc;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    color: #000;
+    font-weight: bold;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: rgba(100, 20, 100, 0.6);
+    border-radius: 5px;
   }
-
+  
+  /* Estilos para la imagen de perfil */
   .autor-info-header-img {
-    width: 60px; /* Ajustar el tamaño de la imagen de perfil en pantallas grandes */
+    width: 60px;
     height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px !important;
+    display: block;
   }
+  
+  /* Estilos para el pseudo-elemento cuando se haga hover */
   .autor-info-header:hover::before {
-    width: 100px; /* Ajustar el ancho del pseudo-elemento cuando se hace hover en pantallas grandes */
-    height: 120px; /* Ajustar el alto del pseudo-elemento cuando se hace hover en pantallas grandes */
-    top: 20px; /* Ajustar la posición vertical del pseudo-elemento cuando se hace hover en pantallas grandes */
-    font-size: 14px; /* Ajustar el tamaño de fuente del pseudo-elemento cuando se hace hover en pantallas grandes */
+    content: "";
+    border: 1px solid #ccc;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 120px;
+    top: 20px;
+    padding-top: 10px;
+    color: #fff;
+    font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
   }
+  
+  
+  
+  .autor-info-header-parrafo {
+    border-radius: 5px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  
 }

@@ -188,3 +188,54 @@ input[type="text"] {
     left:-10px;
   }
 }
+@media (min-width: 767px){
+
+  .conteiner-buscador {
+    align-items: center;
+    text-align: center;
+  }
+  .titulo-buscador{
+    color:var(--color-naranja);
+  }
+  .productos-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #ddd;
+  }
+  
+  .producto {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    max-width: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-blanco);
+  
+  }
+  
+  .producto h3 {
+    margin: 0;
+    padding-left:10px;
+    padding-right: 10px;
+    border-radius: 3px;
+    color:var(--color-naranja);
+  }
+  
+  .producto img {
+    max-width: 80%;
+    height: auto;
+  }
+  
+  /* Estilos del modal de SweetAlert2 */
+  .swal2-popup {
+    max-width: 350px;
+    text-align: left;
+    left:-10px;
+  }
+}
