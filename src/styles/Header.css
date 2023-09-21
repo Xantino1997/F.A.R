@@ -455,7 +455,6 @@
     width: 60px; /* Ajustar el tamaño de la imagen de perfil en pantallas grandes */
     height: 60px;
   }
-
   .autor-info-header:hover::before {
     width: 100px; /* Ajustar el ancho del pseudo-elemento cuando se hace hover en pantallas grandes */
     height: 120px; /* Ajustar el alto del pseudo-elemento cuando se hace hover en pantallas grandes */
