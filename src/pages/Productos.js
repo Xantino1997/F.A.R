@@ -47,7 +47,7 @@ const Productos = () => {
       confirmButtonColor: "#25d366",
       html: `
         <p>Descripción del producto:</p>
-        <p>Inserta aquí la descripción del producto.</p>
+        <p>Insertar aquí la descripción del producto.</p>
       `,
     }).then((result) => {
       if (result.isConfirmed) {
@@ -104,7 +104,7 @@ const Productos = () => {
 
   return (
     <div className="conteiner-buscador">
-      <h1>Buscador de Productos</h1>
+      <h1 className="titulo-buscador">Buscador de Productos</h1>
       <input
         type="text"
         placeholder="Buscar por Nombre"
@@ -119,8 +119,8 @@ const Productos = () => {
             <h3>{producto.nombre}</h3>
             <img src={producto.imagen} alt={producto.nombre} />
             <div>
-              <button onClick={() => abrirModal(producto)}>Ampliar</button>
-              <button onClick={() => abrirWhatsApp(producto.nombre)}>
+              <button className="producto-btn" onClick={() => abrirModal(producto)}>Ampliar</button>
+              <button className="producto-btn" onClick={() => abrirWhatsApp(producto.nombre)}>
                 WhatsApp
               </button>
             </div>

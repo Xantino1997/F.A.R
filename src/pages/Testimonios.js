@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./stylesPages/Testimonios.css"; // Asegúrate de que la ruta sea correcta para tu archivo CSS
 import cliente1Imagen from "../assets/testimonio1.png"; // Agrega la ruta de la imagen del cliente 1
 import cliente2Imagen from "../assets/testimonio2.png"; // Agrega la ruta de la imagen del cliente 2
@@ -26,12 +26,35 @@ const testimoniosData = [
 ];
 
 function Testimonios() {
+  const [imagenVisible, setImagenVisible] = useState(1); // Inicializa con 1 para que la imagen del medio esté seleccionada por defecto
+
   return (
     <div className="testimonios-container">
-      <h1  className="testimonios-titulo">Clientes Satisfechos</h1>
+      <h1 className="testimonios-titulo">Clientes Satisfechos</h1>
+      <div className="testimonios-unicos">
+        {imagenVisible !== null && (
+          <div className="testimonio-unico">
+            <img
+              src={testimoniosData[imagenVisible].imagen}
+              alt={`Cliente ${imagenVisible + 1}`}
+              className="testimonio-imagen-unico"
+            />
+            <h4>{testimoniosData[imagenVisible].nombre}</h4>
+            <p className="testimonio-descripcion-unico">
+              {testimoniosData[imagenVisible].descripcion}
+            </p>
+          </div>
+        )}
+      </div>
       <div className="testimonio">
         {testimoniosData.map((testimonio, index) => (
-          <div key={index} className="testimonio-item">
+          <div
+            key={index}
+            className={`testimonio-item ${
+              index === imagenVisible ? "seleccionado" : ""
+            }`}
+            onClick={() => setImagenVisible(index)}
+          >
             <img
               src={testimonio.imagen}
               alt={`Cliente ${index + 1}`}

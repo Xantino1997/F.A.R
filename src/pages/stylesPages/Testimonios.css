@@ -15,8 +15,9 @@
   
   .testimonio {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     margin-top: 20px;
   }
   
@@ -25,11 +26,22 @@
     flex-direction: column;
     align-items: center;
     margin: 20px;
-    background-color:var(--color-naranja);
+    background-color: var(--color-naranja);
     padding: 20px;
-    border-radius:5px;
-    color: var(--color-blanco)
+    border-radius: 5px;
+    color: var(--color-blanco);
+    cursor: pointer; /* Cambia el cursor al seleccionar un testimonio */
+    transition: background-color 0.3s; /* Agrega una transición suave al cambiar el fondo */
   }
+  
+  /* Estilos para el elemento seleccionado */
+  .testimonio-item.seleccionado {
+    background-color: var(--color-destacado); /* Color de fondo para el elemento seleccionado */
+    color: var(--color-naranja); /* Color de texto para el elemento seleccionado */
+    transform: scale(1.1); /* Efecto de escala para el elemento seleccionado */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombra para el elemento seleccionado */
+  }
+  
   
   .testimonio-imagen {
     width: 100px; 
@@ -47,3 +59,34 @@
     font-family: "Roboto Condensed", sans-serif;
   }
   
+
+  @media screen and (max-width: 767px) {
+    .testimonio {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .testimonio-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      background-color: var(--color-naranja);
+      padding: 20px;
+      border-radius: 5px;
+      color: var(--color-blanco);
+      cursor: pointer; /* Cambia el cursor al seleccionar un testimonio */
+      transition: background-color 0.3s; /* Agrega una transición suave al cambiar el fondo */
+    }
+      /* Estilos para el elemento seleccionado */
+  .testimonio-item.seleccionado {
+    background-color: var(--color-destacado); /* Color de fondo para el elemento seleccionado */
+    color: var(--color-naranja); /* Color de texto para el elemento seleccionado */
+    transform: scale(1.1); /* Efecto de escala para el elemento seleccionado */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombra para el elemento seleccionado */
+  }
+  
+  }

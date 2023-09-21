@@ -42,22 +42,22 @@
 .carousel-content-h5 {
   text-align: center;
   font-weight: bold;
+  color: var(--color-naranja);
 }
 
 .carousel-btn {
-  color: white;
-  background: var(--color-naranja);
+  color: var(--color-naranja);
+  background:  white;
   font-weight: bold;
   text-decoration: none;
   padding: 10px;
   margin-bottom: 10px;
-  color: #fff;
   border-radius: 15px;
   font-family: "Amatic SC", cursive;
   font-family: "Roboto Condensed", sans-serif;
 }
 .carousel-btn:hover {
-  color: #666;
+  color: #fff;
   background: var(--color-amarillo);
 }
 .carousel-item:first-child {
@@ -121,14 +121,13 @@
     position: absolute;
     width: 100%;
     height: 90%;
-    top: 150px;
     left: 100%;
     margin-left: 0%;
-    opacity: 0;
+    opacity: 1.5;
     transition: opacity 1.5s, left 1.6s;
     background-repeat: no-repeat;
     background-position: center;
-   
+    background-size: cover;
   }
 
   .select-image-div{
@@ -137,7 +136,6 @@
     flex-direction: row;
     width: 97%;
     height:11%;
-    top: 111px;
   }
   .select-image {
     border: 3px solid #ccc;
@@ -152,7 +150,6 @@
   .carousel-item-index.active {
     opacity: 1;
     left: 0;
-    top: 150px;
 
   }
 
@@ -160,8 +157,6 @@
     position: absolute;
     text-align: center;
     bottom: 0;
-    top: 140px;
-
     left: 0;
     right: 0;
     padding: 5px;

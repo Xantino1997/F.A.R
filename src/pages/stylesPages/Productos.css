@@ -5,18 +5,19 @@ body {
   align-items: center;
   text-align: center;
 }
-
+.titulo-buscador{
+  color:var(--color-naranja);
+}
 .productos-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  background-color: var(--color-naranja)
+  background-color: #ddd;
 }
 
 .producto {
-  border: 1px solid #ddd;
   padding: 10px;
   margin: 10px;
   text-align: center;
@@ -31,6 +32,10 @@ body {
 
 .producto h3 {
   margin: 0;
+  padding-left:10px;
+  padding-right: 10px;
+  border-radius: 3px;
+  color:var(--color-naranja);
 }
 
 .producto img {
@@ -90,8 +95,8 @@ input[type="text"] {
   margin-right: 10px;
 }
 
-button {
-  background-color: #007bff;
+.producto-btn {
+  background-color:var(--color-naranja);
   color: #fff;
   border: none;
   padding: 5px 10px;
@@ -100,8 +105,8 @@ button {
 }
 
 /* Estilos para el botón de búsqueda y el botón "Ampliar" */
-button:hover {
-  background-color: #0056b3;
+.producto-btn:hover {
+  background-color: orange;
 }
 
 /* Estilos de paginación */

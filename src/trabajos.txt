@@ -1,0 +1,7 @@
+20/09/2023 
+Realice cambios en el header.css para poder darle un estilo al slogan;
+cambie testimonio tanto css como js;
+cambiar footer agregamos imagenes al assets para coincidir con footer js y cambios de css en footer tambien
+cambiado el contactanos js y tambien css;
+cambio en servicios;
+cambios chatbot css y js;
