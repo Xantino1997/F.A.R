@@ -115,7 +115,7 @@ function Footer() {
       </div>
 
       <div className="copyright">
-        <p>
+        <p className="copyright">
           &copy; {currentYear} F.A.R Servicios -
           <Link to="/copyright" className="copyright">
             Todos los derechos reservados.
