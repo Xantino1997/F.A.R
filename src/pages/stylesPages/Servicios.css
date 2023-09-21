@@ -15,7 +15,7 @@
   display: flex;
   flex-wrap: no wrap;
   justify-content: space-around;
-  font-size:30px;
+  font-size: 30px;
 }
 
 .servicio {
@@ -23,7 +23,7 @@
   margin: 20px;
   padding: 20px;
   border: 1px solid #ccc;
-  color: var(--color-naranja); 
+  color: var(--color-naranja);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -34,11 +34,41 @@
   color: var(--color-naranja);
 }
 
+.servicio-imagen-container {
+  position: relative;
+  width: 100%;
+  max-height: 300px;
+  margin-bottom: 10px;
+}
+
 .servicio-imagen {
   width: 100%;
-  max-height: 200px;
+  max-height: 300px;
   object-fit: cover;
-  margin-bottom: 10px;
+  display: block;
+  filter: sepia(90%); /* Aplicar efecto sepia al 100% */
+}
+/* .servicio-imagen:hover {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
+  filter: none;
+} */
+
+.servicio-imagen-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.6) 60%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* Gradiente lineal con difuminado */
+  pointer-events: none; /* Evitar que la capa overlay interfiera con los eventos */
+  z-index: 9; /* Colocar la capa overlay encima de la imagen */
 }
 
 .servicio-descripcion {
@@ -60,5 +90,4 @@
 .ver-mas-btn:hover {
   background-color: var(--color-amarillo);
   color: #666;
-
 }
