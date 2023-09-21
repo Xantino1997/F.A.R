@@ -12,7 +12,6 @@
   --color-blanco: #ffffff;
   --color-black: #000;
 }
-
 .header {
   background-color:red;
   display: flex;
@@ -59,9 +58,10 @@
 .links-header-ul {
   background: white;
   width: 100%;
-  height: 100%;
+  height: 80%;
   padding-top:15px;
   padding-left:15px;
+  width: 100%;
   top:-20px;
   z-index: 999; /* Asegura que el elemento tenga un z-index */
   position: relative; /* Establece una posición relativa */
@@ -91,8 +91,10 @@
   top: -80px;
 }
 .logo-titulo {
-  top: 90px;
+  top: 65px;
   position: absolute;
+  text-align: center;
+  width: 45%;
   color: #000;
   margin-bottom: 10px;
   opacity: 0; /* Inicialmente invisible */
