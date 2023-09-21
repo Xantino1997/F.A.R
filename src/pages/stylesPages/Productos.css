@@ -183,7 +183,8 @@ input[type="text"] {
   
   /* Estilos del modal de SweetAlert2 */
   .swal2-popup {
-    max-width: 400px;
+    max-width: 320px;
     text-align: left;
+    left:-10px;
   }
 }
