@@ -6,8 +6,6 @@ import Swal from "sweetalert2";
 import "./styles/Header.css";
 import logo from "./assets/farservicios.png";
 import { UserContext } from "./UserContext";
-// import sentidos from "./assets/sentidos12.png";
-// import user from "./assets/user.png";
 import { useContext } from "react";
 
 function Header() {
