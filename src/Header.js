@@ -46,8 +46,8 @@ function Header() {
         timer: 5000,
         showConfirmButton: false,
       }).then(() => {
-        // Limpiar el usuario de UserContext (ajusta esto según tu implementación)
-        setUserInfo(""); // Esto depende de cómo se implementó el contexto de usuario en tu aplicación
+        // Limpiar el usuario de UserContext
+        setUserInfo(""); // Esto depende de cómo se implementó el contexto de usuario 
         navigate("/redirigiendo");
       });
     } catch (error) {
@@ -119,13 +119,11 @@ function Header() {
             <li>
               <Link to="/productos">Productos</Link>
             </li>
-            {/* <li>
-                        <Link to="/comunidad">Comunidad</Link>
-                      </li> */}
+           
             {!username && (
-              <li>
-                <Link to="/login">Iniciar sesión</Link>
-              </li>
+              // <li>
+              //   <Link to="/login">Iniciar sesión</Link>
+              // </li>
             )}
             {username && (
               <>
