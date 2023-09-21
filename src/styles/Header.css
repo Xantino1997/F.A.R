@@ -13,7 +13,8 @@
   --color-black: #000;
 }
 .header {
-  background-color:red;
+  background-color:var(--color-naranja); 
+  /* background-color: #edd642; */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -43,69 +44,20 @@
 }
 
 .logo {
-  background:var(--color-naranja);
-  opacity: 0.9;
+  background: transparent;
+  opacity: 0.9; 
   align-items: center;
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: 8em;
-  margin-top: -20px;
-  margin-bottom: -20px;
-  margin-left: -20px;
-  position: relative; /* Añadir posición relativa para que los pseudo-elementos sean relativos a este contenedor */
+  text-align: center;
+  padding: 2px;
+  width: 10em;
+  height: 5em;
 }
-.links-header-ul {
-  background: white;
-  width: 100%;
-  height: 100%;
-  padding-top:15px;
-  padding-left:15px;
-  top:-20px;
-  z-index: 999; /* Asegura que el elemento tenga un z-index */
-  position: relative; /* Establece una posición relativa */
-}
-
-/* Pseudo-elemento para crear el efecto de corte en el margen derecho */
-.logo::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -108px;
-  width: 110px;
-  height: 100%;
-  background-color: red;
-  transform: skewX(40deg);
-  transform-origin: bottom;
-  z-index: 1; /* Asegura que el pseudo-elemento tenga un z-index inferior */
-}
-
-
-
 .logo-img {
-  width: 50%;
-  height:15em;
-  opacity: 1;
-  position: absolute;
-  top: -80px;
-}
-.logo-titulo {
-  top: 90px;
-  position: absolute;
-  color: #000;
-  margin-bottom: 10px;
-  opacity: 0; /* Inicialmente invisible */
-  animation: encender 2s ease-in-out forwards; /* Nombre de la animación, duración, temporización y retención final */
+  width: 100%;
+  height:100%;
+  opacity:1; 
 }
 
-@keyframes encender {
-  0% {
-    opacity: 0; /* Al principio, completamente invisible */
-  }
-  100% {
-    opacity: 1; /* Al final, completamente visible */
-  }
-}
 
 .menu {
   margin-top: 10px;
@@ -124,7 +76,7 @@
 }
 
 .menu ul li a {
-  color: var(--color-black);
+  color: white;
   text-decoration: none;
   padding: 8px;
   border-radius: 15px;
