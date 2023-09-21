@@ -295,7 +295,8 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    color:red;
+    color:#fff;
+    font-weight: bold;
     z-index:5000;
   }
   .btn-menu-header-open {
