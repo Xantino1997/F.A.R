@@ -1,4 +1,5 @@
 // const { user } = useUserContext();
+
 import React, { useState, useRef, useEffect } from "react";
 import { Link, useNavigate, Navigate } from "react-router-dom";
 import { useUserContext } from "./UserContext";
@@ -6,8 +7,9 @@ import Swal from "sweetalert2";
 import "./styles/Header.css";
 import logo from "./assets/farservicios.png";
 import { UserContext } from "./UserContext";
+// import sentidos from "./assets/sentidos12.png";
+// import user from "./assets/user.png";
 import { useContext } from "react";
-
 
 function Header() {
   const navigate = useNavigate();
@@ -45,8 +47,8 @@ function Header() {
         timer: 5000,
         showConfirmButton: false,
       }).then(() => {
-        // Limpiar el usuario de UserContext
-        setUserInfo(""); // Esto depende de cómo se implementó el contexto de usuario 
+        // Limpiar el usuario de UserContext (ajusta esto según tu implementación)
+        setUserInfo(""); // Esto depende de cómo se implementó el contexto de usuario en tu aplicación
         navigate("/redirigiendo");
       });
     } catch (error) {
@@ -118,11 +120,13 @@ function Header() {
             <li>
               <Link to="/productos">Productos</Link>
             </li>
-           
+            {/* <li>
+                        <Link to="/comunidad">Comunidad</Link>
+                      </li> */}
             {!username && (
-              // <li>
-              //   <Link to="/login">Iniciar sesión</Link>
-              // </li>
+              <li>
+                <Link to="/login"></Link>
+              </li>
             )}
             {username && (
               <>
@@ -180,7 +184,7 @@ function Header() {
             )}
           </ul>
         </div>
-        <h3 className="logo-titulo">Brindamos soluciones</h3>
+        <h1 className="logo-titulo">Brindamos soluciones</h1>
       </nav>
       {/* Botón para desplegar el menú */}
       {!isMenuOpen && (
