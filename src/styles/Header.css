@@ -58,9 +58,10 @@
 .links-header-ul {
   background: white;
   width: 100%;
-  height: 100%;
+  height: 80%;
   padding-top:15px;
   padding-left:15px;
+  width: 100%;
   top:-20px;
   z-index: 999; /* Asegura que el elemento tenga un z-index */
   position: relative; /* Establece una posición relativa */
@@ -90,8 +91,10 @@
   top: -80px;
 }
 .logo-titulo {
-  top: 90px;
+  top: 65px;
   position: absolute;
+  text-align: center;
+  width: 45%;
   color: #000;
   margin-bottom: 10px;
   opacity: 0; /* Inicialmente invisible */
@@ -191,53 +194,122 @@
 }
 
 /* Media Query para pantallas pequeñas, como smartphones */
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .header {
+    background-color:red;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    width: 100%;
+    z-index: 9;
+    font-family: "Roboto Condensed", sans-serif;
   }
-  .logo {
-    background: transparent;
-    opacity: 0.9;
-    align-items: center;
-    display:flex;
-    flex-direction: column;
-    width: 15em;
-    height: 6em;
+
+   
+.logo {
+  background:var(--color-naranja);
+  /* background:blue; */
+  opacity: 0.9;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 8em;
+  margin-top: -20px;
+  margin-bottom: -20px;
+  margin-left: -90px;
+  position: relative; /* Añadir posición relativa para que los pseudo-elementos sean relativos a este contenedor */
+}
+.links-header-ul {
+  background: transparent;
+  width: 100%;
+  height: 80%;
+  padding-top:15px;
+  width: 100%;
+  top:0px;
+  z-index: 999; /* Asegura que el elemento tenga un z-index */
+  position: relative; /* Establece una posición relativa */
+}
+
+/* Pseudo-elemento para crear el efecto de corte en el margen derecho */
+.logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -80px;
+  width: 90px;
+  height: 100%;
+  background-color: red;
+  transform: skewX(30deg);
+  transform-origin: bottom;
+  z-index: 1; /* Asegura que el pseudo-elemento tenga un z-index inferior */
+}
+
+.logo-img {
+  width: 50%;
+  height:12em;
+  opacity: 1;
+  position: absolute;
+  top: -50px;
+  left: 1%;
+}
+.logo-titulo {
+  width: 90%;
+  height:4%;
+  background:white;
+  opacity: 1;
+  position: absolute;
+  top:722px;
+  z-index:0;
+  color: #000;
+  font-size:20px;
+  border-radius:5px;
+  left: 5%;
+  animation: encender 2s ease-in-out forwards; /* Nombre de la animación, duración, temporización y retención final */
+}
+
+
+  .autor-info-header-register {
+    top: 30px;
   }
-  .logo-img {
-    width: 40%;
-    height: 13%;
-    opacity: 1;
-    position: absolute;
-    top: 10px;
+  
+  .btn-menu-header {
+    display: none;
   }
+  
+
   /* Estilos para el botón del menú */
   .btn-menu-header {
     display: flex;
     position: absolute;
     top: 10px;
+    left: 10px;
     margin-left: 10px;
     color: var(--color-naranja);
-    background-color: white;
+    background-color: var(--color-naranja);
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    color:red;
+    z-index:5000;
   }
   .btn-menu-header-open {
     position: absolute;
     top: 20px;
     color: var(--color-naranja);
     right: 20px;
-    display: flex;
-    background-color: white;
+    display: flex;    
+    background-color: transparent;
     padding: 10px;
     height: 50px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    color:white !important;
+
   }
 
   /* Estilos para el menú */
@@ -245,15 +317,15 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 60%;
+    height:100vh;
     display: block;
     top: 0%;
     position: absolute;
     margin: 0 auto;
-    border: 1px solid yellow;
-    background: rgba(128, 128, 128, 0.8);
+    border: 10px solid yellow;
+    background: rgba(0, 0, 0, 0.8);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 5;
+    z-index: 15;
     transform: translateY(-100%); /* Ocultar el menú inicialmente */
     transition: transform 0.3s ease; /* Animación para mostrar o cerrar el menú */
   }
@@ -267,10 +339,10 @@
   .menu ul {
     width: 100%;
     height: 100%;
-    background: transparent;
     align-items: center;
     display: flex;
     flex-direction: column;
+    background: transparent;
   }
 
   .menu ul li {
@@ -341,7 +413,7 @@
     font-size: 12px;
     text-decoration: none;
     border-radius: 5px;
-    color: var(--color-naranja);
+    color:red;
   }
 
   .menu ul li a:hover {
@@ -367,11 +439,94 @@
 /* Media Query para pantallas medianas, como tablets */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .header {
+    background-color:red;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    width: 100%;
+    z-index: 9;
+    font-family: "Amatic SC", cursive;
+    font-family: "Roboto Condensed", sans-serif;
   }
-
+  .links-header-ul{
+    background:white;
+    width: 100%;
+    height: 100%;
+    z-index:999;
+  }
+  .autor-info-header-register {
+    top: 30px;
+  }
+  
+  .btn-menu-header {
+    display: none;
+  }
+  
+  .btn-menu-header-open {
+    display: none;
+  }
+  
+  .logo {
+    background:var(--color-naranja);
+    opacity: 0.9;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 8em;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    margin-left: -20px;
+    position: relative; /* Añadir posición relativa para que los pseudo-elementos sean relativos a este contenedor */
+  }
+  .links-header-ul {
+    background: white;
+    width: 100%;
+    height: 80%;
+    padding-top:15px;
+    padding-left:15px;
+    width: 100%;
+    top:-20px;
+    z-index: 999; /* Asegura que el elemento tenga un z-index */
+    position: relative; /* Establece una posición relativa */
+  }
+  
+  /* Pseudo-elemento para crear el efecto de corte en el margen derecho */
+  .logo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -108px;
+    width: 110px;
+    height: 100%;
+    background-color: red;
+    transform: skewX(40deg);
+    transform-origin: bottom;
+    z-index: 1; /* Asegura que el pseudo-elemento tenga un z-index inferior */
+  }
+  
+  
+  
+  .logo-img {
+    width: 50%;
+    height:15em;
+    opacity: 1;
+    position: absolute;
+    top: -80px;
+  }
+  .logo-titulo {
+    top: 65px;
+    position: absolute;
+    text-align: center;
+    width: 45%;
+    color: #000;
+    margin-bottom: 10px;
+    opacity: 0; /* Inicialmente invisible */
+    animation: encender 2s ease-in-out forwards; /* Nombre de la animación, duración, temporización y retención final */
+  }
+  
   /* Estilos para el menú */
   .menu {
     display: flex;
@@ -442,6 +597,95 @@
 
 /* Media Query para pantallas grandes, como computadoras de escritorio */
 @media screen and (min-width: 1024px) {
+  .header {
+    background-color:red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    width: 100%;
+    z-index: 9;
+    font-family: "Amatic SC", cursive;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  .links-header-ul{
+    background:white;
+    width: 100%;
+    height: 100%;
+    z-index:999;
+  }
+  .autor-info-header-register {
+    top: 30px;
+  }
+  
+  .btn-menu-header {
+    display: none;
+  }
+  
+  .btn-menu-header-open {
+    display: none;
+  }
+  
+  .logo {
+    background:var(--color-naranja);
+    opacity: 0.9;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 8em;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    margin-left: -20px;
+    position: relative; /* Añadir posición relativa para que los pseudo-elementos sean relativos a este contenedor */
+  }
+  .links-header-ul {
+    background: white;
+    width: 100%;
+    height: 80%;
+    padding-top:15px;
+    padding-left:15px;
+    width: 100%;
+    top:-20px;
+    z-index: 999; /* Asegura que el elemento tenga un z-index */
+    position: relative; /* Establece una posición relativa */
+  }
+  
+  /* Pseudo-elemento para crear el efecto de corte en el margen derecho */
+  .logo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -108px;
+    width: 110px;
+    height: 100%;
+    background-color: red;
+    transform: skewX(40deg);
+    transform-origin: bottom;
+    z-index: 1; /* Asegura que el pseudo-elemento tenga un z-index inferior */
+  }
+  
+  
+  
+  .logo-img {
+    width: 50%;
+    height:15em;
+    opacity: 1;
+    position: absolute;
+    top: -80px;
+  }
+  .logo-titulo {
+    top: 65px;
+    position: absolute;
+    text-align: center;
+    width: 45%;
+    color: #000;
+    margin-bottom: 10px;
+    opacity: 0; /* Inicialmente invisible */
+    animation: encender 2s ease-in-out forwards; /* Nombre de la animación, duración, temporización y retención final */
+  }
+  
   .menu ul li {
     margin-right: 30px; /* Ajustar el margen entre los elementos del menú en pantallas grandes */
   }

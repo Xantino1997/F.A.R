@@ -5,3 +5,9 @@ cambiar footer agregamos imagenes al assets para coincidir con footer js y cambi
 cambiado el contactanos js y tambien css;
 cambio en servicios;
 cambios chatbot css y js;
+
+21/09/2023
+cambio footer css
+cambio assets imagenes
+chatbot css y js;
+cambio indexPage css;

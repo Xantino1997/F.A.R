@@ -94,7 +94,6 @@ function Header() {
     <header className="header">
       <div className="logo">
         <img className="logo-img" alt="Logo" src={logo} />
-        <h3 className="logo-titulo">Brindamos soluciones</h3>
       </div>
 
       <nav className={`menu ${isMenuOpen ? "active" : ""}`}>
@@ -121,14 +120,12 @@ function Header() {
             <li>
               <Link to="/productos">Productos</Link>
             </li>
-            {/* <li>
-                        <Link to="/comunidad">Comunidad</Link>
-                      </li> */}
-            {!username && (
+          
+            {/* {!username && (
               <li>
-                <Link to="/login">Iniciar sesión</Link>
+                <Link to="/login"></Link>
               </li>
-            )}
+            )} */}
             {username && (
               <>
                 <li>
@@ -185,7 +182,7 @@ function Header() {
             )}
           </ul>
         </div>
-        <h3 className="logo-titulo">Brindamos soluciones</h3>
+        <h1 className="logo-titulo">Brindamos soluciones</h1>
       </nav>
       {/* Botón para desplegar el menú */}
       {!isMenuOpen && (

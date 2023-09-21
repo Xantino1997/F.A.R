@@ -7,19 +7,19 @@ import cliente3Imagen from "../assets/testimonio3.png"; // Agrega la ruta de la 
 const testimoniosData = [
   {
     imagen: cliente1Imagen,
-    nombre: "Lorena Gerencia Bco Macro:",
+    nombre: "Banco Galicia:",
     descripcion:
       ' "La empresa F.A.R. es increíble, su servicio es de primera calidad y sus productos son confiables".',
   },
   {
     imagen: cliente2Imagen,
-    nombre: "Valeria Ama de casa:",
+    nombre: "Banco Frances:",
     descripcion:
       ' "Los generadores eléctricos de F.A.R. me han ahorrado muchas veces en momentos de cortes de energía, ¡son altamente recomendables!".',
   },
   {
     imagen: cliente3Imagen,
-    nombre: "Pablo Contruccion en zonas rurales:",
+    nombre: "Sancor Seguros:",
     descripcion:
       ' "No puedo expresar lo satisfecho que estoy con la atención al cliente y la eficiencia de los generadores de F.A.R. ¡Simplemente los mejores!".',
   },

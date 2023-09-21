@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./stylesPages/IndexPage.css";
 import Testimonio from "./Testimonios"
 import grupo1 from "../assets/grup2.png";
-import grupo2 from "../assets/grupo2.png";
-import grupo3 from "../assets/tienda.png";
+import grupo2 from "../assets/dobleImg.png";
+import grupo3 from "../assets/paneles.png";
 import { Link } from "react-router-dom";
 
 const images = [

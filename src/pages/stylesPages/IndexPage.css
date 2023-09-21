@@ -134,14 +134,14 @@
     position:absolute;
     display:flex;
     flex-direction: row;
-    width: 97%;
+    width: 90%;
     height:11%;
+    bottom:-40px;
   }
   .select-image {
     border: 3px solid #ccc;
     width: 90px; /* Tamaño fijo */
     height:60px; /* Tamaño fijo */
-    margin: 5px; /* Espacio entre las imágenes */
     margin-top: 15px; /* Espacio entre las imágenes */
     cursor: pointer; /* Cambia el cursor al pasar por encima */
   }

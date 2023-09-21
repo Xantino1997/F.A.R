@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./styles/ChatBot.css";
-import testimonio1 from "./assets/testimonio1.png";
-import testimonio2 from "./assets/testimonio2.png";
-import testimonio3 from "./assets/testimonio3.png";
+import operador1 from "./assets/operador1.png";
+import operador2 from "./assets/operador2.png";
+import operador3 from "./assets/operador3.png";
 
 function Chatbot() {
   const [showChat, setShowChat] = useState(false);
@@ -10,7 +10,7 @@ function Chatbot() {
   const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
-  const botImages = [testimonio1, testimonio2, testimonio3];
+  const botImages = [operador1, operador2, operador3];
   const phoneNumber = "543465650158"; // Reemplaza con el número de teléfono del proveedor correcto
   const getBotImage = () => {
     const now = new Date();
