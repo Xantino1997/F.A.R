@@ -48,19 +48,21 @@ const Productos = () => {
       html: `
         <p>Descripción del producto:</p>
 
-        <p>Aca iria la descripción del producto.</p>
+        <p>Aquí iría la descripción del producto.</p>
       `,
     }).then((result) => {
       if (result.isConfirmed) {
-        abrirWhatsApp(producto.nombre);
+        abrirWhatsApp(producto.nombre, producto.imagen);
       }
     });
   };
 
   const numeroWhatsApp = "543465650158"; // Reemplaza con el número de WhatsApp deseado
 
-  const abrirWhatsApp = (nombreProducto) => {
+  const abrirWhatsApp = (nombreProducto, imagenProducto) => {
     const message = `¡Hola! Estoy interesado en el producto: ${nombreProducto}`;
+    const encodedMessage = encodeURIComponent(message);
+    const encodedImage = encodeURIComponent(imagenProducto);
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
@@ -68,17 +70,13 @@ const Productos = () => {
     ) {
       // Dispositivo móvil
       window.open(
-        `whatsapp://send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
-          message
-        )}`,
+        `whatsapp://send?phone=${numeroWhatsApp}&text=${encodedMessage}%0A%0A${encodedImage}`,
         "_blank"
       );
     } else {
       // Computadora de escritorio
       window.open(
-        `https://web.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
-          message
-        )}`,
+        `https://web.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodedMessage}%0A%0A${encodedImage}`,
         "_blank"
       );
     }
@@ -121,7 +119,7 @@ const Productos = () => {
             <img src={producto.imagen} alt={producto.nombre} />
             <div>
               <button className="producto-btn" onClick={() => abrirModal(producto)}>Ampliar</button>
-              <button className="producto-btn" onClick={() => abrirWhatsApp(producto.nombre)}>
+              <button className="producto-btn" onClick={() => abrirWhatsApp(producto.nombre, producto.imagen)}>
                 WhatsApp
               </button>
             </div>
