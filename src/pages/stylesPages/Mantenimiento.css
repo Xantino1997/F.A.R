@@ -1,0 +1,39 @@
+.mantenimiento-edilicio {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+  }
+  
+  .mantenimiento-edilicio-text {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .mantenimiento-edilicio h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .mantenimiento-edilicio p {
+    margin-bottom: 15px;
+  }
+  
+  .mantenimiento-edilicio h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .mantenimiento-edilicio ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .mantenimiento-edilicio-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  

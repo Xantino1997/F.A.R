@@ -13,3 +13,9 @@ chatbot css y js;
 cambio indexPage css;
 comienzo de responsive css;
 agregue descripcion a los productos;
+
+
+
+22/09/2023
+
+agregamos los icon de FontAwesomeIcon;
