@@ -222,7 +222,7 @@
   height: 8em;
   margin-top: -20px;
   margin-bottom: -20px;
-  margin-left: -120px;
+  margin-left: -110px;
   position: relative; /* Añadir posición relativa para que los pseudo-elementos sean relativos a este contenedor */
 }
 .links-header-ul {
@@ -323,7 +323,7 @@
     height:130%;
     display: block;
     top: 0%;
-    left: -2%;
+    left:0%;
     position: absolute;
     margin: 0 auto;
     border: none;
