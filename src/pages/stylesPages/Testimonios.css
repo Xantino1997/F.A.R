@@ -1,6 +1,6 @@
 .testimonios-container {
   text-align: center;
-  margin-top: 200px;
+  margin-top: 300px;
   background-color: #ddd;
 }
 
@@ -120,7 +120,9 @@
     justify-content: center;
     margin-top: 20px;
   }
-
+.testimonio-unico{
+  width: 98%;
+}
   .testimonio-item {
     display: flex;
     flex-direction: column;
@@ -135,9 +137,7 @@
   }
   /* Estilos para el elemento seleccionado */
   .testimonio-item.seleccionado {
-    background-color: var(
-      --color-destacado
-    ); /* Color de fondo para el elemento seleccionado */
+ /* Color de fondo para el elemento seleccionado */
     color: var(
       --color-naranja
     ); /* Color de texto para el elemento seleccionado */

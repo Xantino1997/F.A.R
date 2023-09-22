@@ -112,9 +112,10 @@
 @media screen and (max-width: 767px) {
   .carousel-index {
     position: relative;
-    height: 400px;
+    height: 350px;
     overflow: hidden;
     display:flex;
+    left:0px;
   }
 
   .carousel-item-index {
