@@ -12,12 +12,12 @@ const MySwal = Swal;
 
 const Productos = () => {
   const [productos, setProductos] = useState([
-    { id: 1, nombre: "Maquina Cortadora", imagen: grupo1 },
-    { id: 2, nombre: "Pulidor", imagen: grupo2 },
-    { id: 3, nombre: "Sistema solar", imagen: grupo3 },
-    { id: 4, nombre: "Generador", imagen: grupo4 },
-    { id: 5, nombre: "Generador electro base", imagen: grupo5 },
-    { id: 6, nombre: "Generador electro base full", imagen: grupo6 },
+    { id: 1, nombre: "Maquina Cortadora", imagen: grupo1 ,descripcion: "Maquina  para cortar pasto la mejor"},
+    { id: 2, nombre: "Pulidor", imagen: grupo2,descripcion: "Maquina Acer para cortar pasto, excelente precio calidad" },
+    { id: 3, nombre: "Sistema solar", imagen: grupo3,descripcion: "Maquina de acero inoxidable" },
+    { id: 4, nombre: "Generador", imagen: grupo4,descripcion: "Maquina de punta electromagnetica " },
+    { id: 5, nombre: "Generador electro base", imagen: grupo5,descripcion: "Maquina mejora el pulido y brinda una solucion de vanguardia" },
+    { id: 6, nombre: "Generador electro base full", imagen: grupo6,descripcion: "Maquina Task para tareas complejas y diversas" },
     // Agrega más productos aquí
   ]);
   const [filtro, setFiltro] = useState("");
@@ -48,21 +48,19 @@ const Productos = () => {
       html: `
         <p>Descripción del producto:</p>
 
-        <p>Aquí iría la descripción del producto.</p>
+        <p>${ producto.descripcion}</p>
       `,
     }).then((result) => {
       if (result.isConfirmed) {
-        abrirWhatsApp(producto.nombre, producto.imagen);
+        abrirWhatsApp(producto.nombre);
       }
     });
   };
 
   const numeroWhatsApp = "543465650158"; // Reemplaza con el número de WhatsApp deseado
 
-  const abrirWhatsApp = (nombreProducto, imagenProducto) => {
+  const abrirWhatsApp = (nombreProducto) => {
     const message = `¡Hola! Estoy interesado en el producto: ${nombreProducto}`;
-    const encodedMessage = encodeURIComponent(message);
-    const encodedImage = encodeURIComponent(imagenProducto);
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
@@ -70,13 +68,17 @@ const Productos = () => {
     ) {
       // Dispositivo móvil
       window.open(
-        `whatsapp://send?phone=${numeroWhatsApp}&text=${encodedMessage}%0A%0A${encodedImage}`,
+        `whatsapp://send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
+          message
+        )}`,
         "_blank"
       );
     } else {
       // Computadora de escritorio
       window.open(
-        `https://web.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodedMessage}%0A%0A${encodedImage}`,
+        `https://web.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
+          message
+        )}`,
         "_blank"
       );
     }
@@ -119,7 +121,7 @@ const Productos = () => {
             <img src={producto.imagen} alt={producto.nombre} />
             <div>
               <button className="producto-btn" onClick={() => abrirModal(producto)}>Ampliar</button>
-              <button className="producto-btn" onClick={() => abrirWhatsApp(producto.nombre, producto.imagen)}>
+              <button className="producto-btn" onClick={() => abrirWhatsApp(producto.nombre)}>
                 WhatsApp
               </button>
             </div>
