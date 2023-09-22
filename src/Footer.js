@@ -79,7 +79,7 @@ function Footer() {
             <li>
               <Link
                 className="redes-list-link"
-                to="https://www.facebook.com/centromocovi/?locale=es_LA"
+                to="https://www.facebook.com/"
                 target="_blank"
               >
                 <img
@@ -93,7 +93,7 @@ function Footer() {
             <li>
               <Link
                 className="redes-list-link"
-                to="https://www.instagram.com/centromocovi/?hl=af"
+                to="https://www.instagram.com/"
                 target="_blank"
               >
                 <img

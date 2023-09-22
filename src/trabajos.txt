@@ -11,3 +11,5 @@ cambio footer css
 cambio assets imagenes
 chatbot css y js;
 cambio indexPage css;
+comienzo de responsive css;
+agregue descripcion a los productos;
