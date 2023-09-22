@@ -60,10 +60,13 @@
   padding-bottom: 40px;
   font-weight: bold;
 }
-
+.social-icon{
+  width: 10%;
+  height: 10%;
+}
 .social-facebook {
   margin-right: 5px;
-  width: 15%;
+  width: 25%;
   border-radius: 50%;
 }
 .social-instagram {
@@ -79,17 +82,15 @@
 
 .social-text {
   margin-left: 5px;
+  font-size:18px;
 }
 
-.escudo {
-  margin-right: 5px;
-  width: 8%;
-  border-radius: 30%;
-}
 .contactos {
   margin-right: 5px;
   width: 8%;
+  height: 8%;
   border-radius: 30%;
+  color:var(--color-naranja);
 }
 .column-title {
   color: var(--color-naranja);
