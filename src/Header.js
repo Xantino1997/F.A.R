@@ -5,7 +5,7 @@ import { Link, useNavigate, Navigate } from "react-router-dom";
 import { useUserContext } from "./UserContext";
 import Swal from "sweetalert2";
 import "./styles/Header.css";
-import logo from "./assets/farservicios.png";
+import logo from "./assets/farservicios2.png";
 import { UserContext } from "./UserContext";
 // import sentidos from "./assets/sentidos12.png";
 // import user from "./assets/user.png";

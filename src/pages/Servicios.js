@@ -9,23 +9,23 @@ const serviciosData = [
   {
     title: "Mantenimientos edilicios",
     description:
-      "En F.A.R. Servicios, nos especializamos en ofrecer soluciones integrales para el mantenimiento edilicio. Nuestro compromiso es mantener sus instalaciones en óptimas condiciones, brindando un rendimiento confiable y eficiente en cada proyecto. Contamos con un equipo calificado que sigue los estándares más altos de calidad en cada tarea. Ya sea que necesite mantenimiento preventivo o correctivo, nuestra experiencia y dedicación garantizan la satisfacción de nuestros clientes.",
+      "En F.A.R. Servicios, nos especializamos en ofrecer soluciones integrales para el mantenimiento edilicio. Nuestro compromiso es mantener sus instalaciones en óptimas condiciones, brindando un rendimiento confiable y eficiente en cada proyecto.",
     image: herramientas, // Agregar la ruta de la imagen aca
-    route: "/mantenimiento", // Agregar la ruta correspondiente aquí
+    route: "/mantenimiento", 
   },
   {
     title: "Soporte Técnico 24/7",
     description:
       "Nuestro equipo de soporte técnico está disponible las 24 horas del día, los 7 días de la semana, para atender cualquier consulta o emergencia relacionada con sus generadores eléctricos.",
     image: atencion,
-    route: "/soporte", // Agregar la ruta correspondiente aquí
+    route: "/soporte", 
   },
   {
     title: "Energía Sostenible",
     description:
       "Comprometidos con el medio ambiente, ofrecemos soluciones de energía sostenible que reducen su huella de carbono y promueven la responsabilidad ambiental.",
     image: familia,
-    route: "/energia-sostenible", // Agregar la ruta correspondiente aquí
+    route: "/energia-sostenible", 
   },
 ];
 
