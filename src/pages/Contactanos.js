@@ -17,7 +17,7 @@ const Contacto = () => {
         </div>
         <div className="direccion-container">
           <FontAwesomeIcon  icon={faMapMarker} className="icon" /> {/* Icono de Ubicación */}
-          <p>Galvez Sana Fe</p> {/* Reemplaza "Tu Ubicación Aquí" con la ubicación deseada */}
+          <p>Galvez Santa Fe</p> {/* Reemplaza "Tu Ubicación Aquí" con la ubicación deseada */}
         </div>
         <div className="telefono-container">
           <FontAwesomeIcon icon={faPhone} className="icon" />
