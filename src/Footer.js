@@ -44,7 +44,7 @@ function Footer() {
           </ul>
         </div>
         <div className="column">
-          <h3 className="column-title">Redes Sociales</h3>
+          <h3 className="column-title">Redes</h3>
           <ul className="redes-list">
             <li>
               <a
