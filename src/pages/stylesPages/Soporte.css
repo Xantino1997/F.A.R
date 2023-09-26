@@ -1,0 +1,27 @@
+.support-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.support-info h2 {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.support-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.soporte-img-completa {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  display: block;
+  filter: sepia(90%); /* Aplicar efecto sepia al 100% */
+}
+
+

@@ -1,0 +1,28 @@
+.energy-info {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .energy-info h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--color-naranja);; /* Color del texto del encabezado */
+  }
+  
+  .energy-info p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #666; /* Color del texto del párrafo */
+  }
+  
+  .energy-img {
+    text-align: center;
+  }
+  
+  .energy-img-completa {
+    max-width: 100%;
+    height: auto;
+  }
+  
