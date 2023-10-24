@@ -21,24 +21,21 @@ function Footer() {
           <h3 className="column-title">Contacto</h3>
           <ul className="contacto-list">
             <li>
-              <FontAwesomeIcon icon={faEnvelope} className="contactos" />
               <a
                 className="contacto-list-link"
                 href="mailto:arielaraujo2023@gmail.com"
               >
-                farenergetica@gmail.com
+                <FontAwesomeIcon icon={faEnvelope} className="contactos" />
               </a>
             </li>
             <li>
-              <FontAwesomeIcon icon={faPhone} className="contactos" />
               <a className="contacto-list-link" href="tel:03465499170">
-                03465-499 170
+                <FontAwesomeIcon icon={faPhone} className="contactos" />
               </a>
             </li>
             <li>
-              <FontAwesomeIcon icon={faWhatsapp} className="contactos" />
               <a className="contacto-list-link" href="#">
-                Whatsapp
+                <FontAwesomeIcon icon={faWhatsapp} className="contactos" />
               </a>
             </li>
           </ul>
@@ -54,7 +51,7 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faFacebook} className="social-icon" />
-                <span className="social-text">Facebook</span>
+                {/* <span className="social-text">Facebook</span> */}
               </a>
             </li>
             <li>
@@ -65,7 +62,7 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faInstagram} className="social-icon" />
-                <span className="social-text">Instagram</span>
+                {/* <span className="social-text">Instagram</span> */}
               </a>
             </li>
             <li>
@@ -76,7 +73,7 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faYoutube} className="social-icon" />
-                <span className="social-text">Youtube</span>
+                {/* <span className="social-text">Youtube</span> */}
               </a>
             </li>
           </ul>
