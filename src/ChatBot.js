@@ -11,17 +11,17 @@ function Chatbot() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
   const botImages = [operador1, operador2, operador3];
-  const phoneNumber = "543465650158"; // Reemplaza con el número de teléfono del proveedor correcto
+  const phoneNumber = "543465650158";
   const getBotImage = () => {
     const now = new Date();
     const hour = now.getHours();
 
     if (hour >= 6 && hour < 12) {
-      return botImages[0]; // testimonio1
+      return botImages[0]; // ChatOperador1
     } else if (hour >= 12 && hour < 18) {
-      return botImages[1]; // testimonio2
+      return botImages[1]; // ChatOperador2
     } else {
-      return botImages[2]; // testimonio3
+      return botImages[2]; // ChatOperador3
     }
   };
 
@@ -78,9 +78,9 @@ function Chatbot() {
           </p>
           <p style={{ color: "#222" }}>Responde con una de las siguientes opciones:</p>
           <ul>
-            <li>Trabajos</li>
-            <li>redes</li>
-            <li>whatsapp</li>
+            <li>Navegar</li>
+            <li>Redes</li>
+            <li>Whatsapp</li>
           </ul>
         </div>
       );
@@ -91,7 +91,7 @@ function Chatbot() {
         if (messages.length === 0) {
           botResponse = divResponse;
         } else {
-          if (inputText.toLowerCase().includes("trabajos")) {
+          if (inputText.toLowerCase().includes("navegar")) {
             botResponse = (
               <>
                 <div className="div-respuesta-bot">
@@ -111,9 +111,9 @@ function Chatbot() {
                 <div style={{ backgroundColor: "#eee", padding: "10px" }}>
                   <p style={{ color: "#333" }}>O responde:</p>
                   <ul>
-                    <li>Trabajos</li>
-                    <li>redes</li>
-                    <li>whatsapp</li>
+                    <li>Navegar</li>
+                    <li>Redes</li>
+                    <li>Whatsapp</li>
                   </ul>
                 </div>
               </>
@@ -138,9 +138,9 @@ function Chatbot() {
                 <div style={{ backgroundColor: "#eee", padding: "10px" }}>
                   <p style={{ color: "#333" }}> O responde:</p>
                   <ul>
-                    <li>Trabajos</li>
-                    <li>redes</li>
-                    <li>whatsapp</li>
+                    <li>Navegar</li>
+                    <li>Redes</li>
+                    <li>Whatsapp</li>
                   </ul>
                 </div>
               </>
@@ -162,7 +162,7 @@ function Chatbot() {
             );
           } else {
             botResponse =
-              "Para una mejor atencion Responde: trabajos, redes, Whatsapp";
+              "Para una mejor atencion Responde: navegar, redes, Whatsapp";
           }
         }
 
@@ -189,7 +189,7 @@ function Chatbot() {
       </div>
       <div className="chatbot-container">
         <div className="chatbot-header">
-          <span>Chatea con un Asesor</span>
+          <span>Esciribi a un Asesor</span>
         </div>
         <div className="chatbot-messages">
           {messages.map((message, index) => (
