@@ -23,7 +23,7 @@ function Footer() {
             <li>
               <a
                 className="contacto-list-link"
-                href="mailto:arielaraujo2023@gmail.com"
+                href="mailto:farservicioclientes@gmail.com"
               >
                 <FontAwesomeIcon icon={faEnvelope} className="contactos" />
               </a>
@@ -51,7 +51,6 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faFacebook} className="social-icon" />
-                {/* <span className="social-text">Facebook</span> */}
               </a>
             </li>
             <li>

@@ -9,8 +9,13 @@ function Chatbot() {
   const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
-  const botImages = [operador1, operador2, operador3];
+  const botImages = [
+    { name: "Diego", image: operador1 },
+    { name: "Clarissa", image: operador2 },
+    { name: "Carlos", image: operador3 },
+  ];
   const phoneNumber = "543465650158";
   const getBotImage = () => {
     const now = new Date();
@@ -71,21 +76,25 @@ function Chatbot() {
       setMessages([...messages, newUserMessage]);
       setInputText("");
       setIsLoading(true);
-      const divResponse = (
-        <div style={{ backgroundColor: "#eee", padding: "10px" }}>
-          <p style={{ color: "#333 " }}>
-            Hola, ¿cómo estás? Bienvenido. ¡Encantado de ayudarte!
-          </p>
-          <p style={{ color: "#222" }}>Responde con una de las siguientes opciones:</p>
-          <ul>
-            <li>Navegar</li>
-            <li>Redes</li>
-            <li>Whatsapp</li>
-          </ul>
-        </div>
-      );
+      setIsTyping(true);
 
-      try {
+      setTimeout(() => {
+        const divResponse = (
+          <div style={{ backgroundColor: "#eee", padding: "10px" }}>
+            <p style={{ color: "#333 " }}>
+              Hola, ¿cómo estás? Bienvenido. ¡Encantado de ayudarte!
+            </p>
+            <p style={{ color: "#222" }}>
+              Responde con una de las siguientes opciones:
+            </p>
+            <ul>
+              <li>Navegar</li>
+              <li>Redes</li>
+              <li>Whatsapp</li>
+            </ul>
+          </div>
+        );
+
         let botResponse = "";
 
         if (messages.length === 0) {
@@ -98,10 +107,10 @@ function Chatbot() {
                   Mira estos enlaces para ver si te sirven:
                   <ul>
                     <li>
-                    <a href="/productos">Productos</a>
+                      <a href="/productos">Productos</a>
                     </li>
                     <li>
-                    <a href="/servicios">Servicios</a>
+                      <a href="/servicios">Servicios</a>
                     </li>
                     <li>
                       <a href="/contactanos">Contacto</a>
@@ -146,7 +155,6 @@ function Chatbot() {
               </>
             );
           } else if (inputText.toLowerCase().includes("whatsapp")) {
-            // Abre una ventana nueva para enviar un mensaje de WhatsApp
             botResponse = (
               <div className="div-whatsapp">
                 <a
@@ -162,15 +170,14 @@ function Chatbot() {
             );
           } else {
             botResponse =
-              "Para una mejor atencion Responde: navegar, redes, Whatsapp";
+              "Para una mejor atención, responde: navegar, redes, Whatsapp";
           }
         }
 
         const newBotMessage = { text: botResponse, isUser: false };
         setMessages([...messages, newBotMessage]);
-      } catch (error) {
-        console.error("Error al obtener la respuesta del bot:", error);
-      }
+        setIsTyping(false);
+      }, 2000);
 
       setIsLoading(false);
     }
@@ -182,14 +189,18 @@ function Chatbot() {
     }
   };
 
+  const currentBotData = getBotImage();
+  const currentBotName = currentBotData.name;
+  const currentBotImage = currentBotData.image;
+
   return (
     <div className={`chatbot ${showChat ? "active" : ""}`}>
       <div className="chatbot-toggle" onClick={toggleChat}>
-        <img src={getBotImage()} alt="Chatbot" />
+        <img src={currentBotImage} alt={currentBotName} />
       </div>
       <div className="chatbot-container">
         <div className="chatbot-header">
-          <span>Esciribi a un Asesor</span>
+          <span>Escribe a {currentBotName}</span>
         </div>
         <div className="chatbot-messages">
           {messages.map((message, index) => (
@@ -202,6 +213,11 @@ function Chatbot() {
               {message.text}
             </div>
           ))}
+          {isTyping && (
+            <div className="message bot-message">
+              <p>{currentBotName} está escribiendo...</p>
+            </div>
+          )}
           <div ref={messagesEndRef} />
         </div>
         <div className="chatbot-input">
