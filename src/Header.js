@@ -84,7 +84,7 @@ function Header() {
   };
 
   const handleMenuItemClick = () => {
-    setIsMenuOpen(false); // Cierra el menú al hacer clic en una opción del menú
+    setIsMenuOpen(false); 
   };
 
   return (

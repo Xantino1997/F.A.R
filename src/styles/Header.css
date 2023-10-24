@@ -101,7 +101,7 @@
   position: absolute;
   text-align: center;
   width: 45%;
-  color: #000;
+  color: #fff;
   margin-bottom: 10px;
   opacity: 0; /* Inicialmente invisible */
   animation: encender 2s ease-in-out forwards; /* Nombre de la animación, duración, temporización y retención final */
