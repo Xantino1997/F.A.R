@@ -1,8 +1,29 @@
+/* Tu estilo actual para .support-info */
 .support-info {
   display: flex;
   align-items: center;
-  flex-direction: column;
   margin: 20px;
+  background-color: #dde;
+}
+
+.soporte-img {
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.soporte-img-completa {
+  object-fit: cover;
+  width: 70%;
+  max-height: 40%;
+  display: block;
+  filter: sepia(90%);
+}
+
+.soporte-text {
+  flex: 1;
+  padding: 0 20px;
 }
 
 .support-info h2 {
@@ -15,13 +36,3 @@
   font-size: 16px;
   margin-bottom: 10px;
 }
-
-.soporte-img-completa {
-  width: 100%;
-  max-height: 300px;
-  object-fit: contain;
-  display: block;
-  filter: sepia(90%); /* Aplicar efecto sepia al 100% */
-}
-
-

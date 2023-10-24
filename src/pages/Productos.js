@@ -12,12 +12,12 @@ const MySwal = Swal;
 
 const Productos = () => {
   const [productos, setProductos] = useState([
-    { id: 1, nombre: "Maquina Cortadora", imagen: grupo1 ,descripcion: "Maquina  para cortar pasto la mejor"},
-    { id: 2, nombre: "Pulidor", imagen: grupo2,descripcion: "Maquina Acer para cortar pasto, excelente precio calidad" },
-    { id: 3, nombre: "Sistema solar", imagen: grupo3,descripcion: "Maquina de acero inoxidable" },
-    { id: 4, nombre: "Generador", imagen: grupo4,descripcion: "Maquina de punta electromagnetica " },
-    { id: 5, nombre: "Generador electro base", imagen: grupo5,descripcion: "Maquina mejora el pulido y brinda una solucion de vanguardia" },
-    { id: 6, nombre: "Generador electro base full", imagen: grupo6,descripcion: "Maquina Task para tareas complejas y diversas" },
+    { id: 1, nombre: "Generador electrico", imagen: grupo1 ,descripcion: "Generador electrico funcional"},
+    { id: 2, nombre: "Generador electrico color naranja", imagen: grupo2,descripcion: "Ideal para dias de camping" },
+    { id: 3, nombre: "Generador electrico color amarillo", imagen: grupo3,descripcion: "Facil manejo y transporte" },
+    { id: 4, nombre: "Generador familiar", imagen: grupo4,descripcion: "Energia eficiente y amigable con el medio ambiente" },
+    { id: 5, nombre: "Soporte integral", imagen: grupo5,descripcion: "Soporte eficiente e integral" },
+    { id: 6, nombre: "Generador electro base full", imagen: grupo6,descripcion: "Eficiente y potente ideal para el hogar" },
     // Agrega más productos aquí
   ]);
   const [filtro, setFiltro] = useState("");

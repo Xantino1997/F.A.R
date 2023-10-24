@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import "./styles/Header.css";
 import logo from "./assets/farservicios2.png";
+// import logo from "./assets/F.A.R.png";
+
 import { UserContext } from "./UserContext";
 import { useContext } from "react";
 

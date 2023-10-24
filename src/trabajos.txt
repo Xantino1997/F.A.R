@@ -19,3 +19,6 @@ agregue descripcion a los productos;
 22/09/2023
 
 agregamos los icon de FontAwesomeIcon;
+
+25/09/2023
+Agregado de rutas de servicios con una reseña y carga de css sobre las mismas rutas, ademas de cambio de logo para poder darle un estilo de border-radius 50%;

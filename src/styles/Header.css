@@ -44,7 +44,7 @@
 
 .logo {
   background:var(--color-naranja);
-  opacity: 0.9;
+  /* opacity: 0.9; */
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -220,7 +220,7 @@
 .logo {
   background:var(--color-naranja);
   /* background:blue; */
-  opacity: 0.9;
+  /* opacity: 0.9; */
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -258,7 +258,7 @@
 .logo-img {
   width: 25%;
   height:5em;
-  opacity: 1;
+  /* opacity: 1; */
   position: absolute;
   top: -2px;
   left: 8%;
