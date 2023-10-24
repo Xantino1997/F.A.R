@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import "./stylesPages/Testimonios.css"; // Asegúrate de que la ruta sea correcta para tu archivo CSS
-import cliente1Imagen from "../assets/testimonio1.png"; // Agrega la ruta de la imagen del cliente 1
-import cliente2Imagen from "../assets/testimonio2.png"; // Agrega la ruta de la imagen del cliente 2
-import cliente3Imagen from "../assets/testimonio3.png"; // Agrega la ruta de la imagen del cliente 3
+import React, { useState, useEffect } from "react";
+import "./stylesPages/Testimonios.css";
+import cliente1Imagen from "../assets/testimonio1.png"; 
+import cliente2Imagen from "../assets/testimonio2.png"; 
+import cliente3Imagen from "../assets/testimonio3.png"; 
 
 const testimoniosData = [
   {
@@ -26,7 +26,17 @@ const testimoniosData = [
 ];
 
 function Testimonios() {
-  const [imagenVisible, setImagenVisible] = useState(1); // Inicializa con 1 para que la imagen del medio esté seleccionada por defecto
+  const [imagenVisible, setImagenVisible] = useState(0); // Inicializa con 0 para el primer testimonio
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setImagenVisible((imagenVisible) =>
+        imagenVisible === testimoniosData.length - 1 ? 0 : imagenVisible + 1
+      );
+    }, 10000); // Cambiar cada 10 segundos
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="testimonios-container">

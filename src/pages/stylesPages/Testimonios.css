@@ -113,6 +113,9 @@
 }
 
 @media screen and (max-width: 767px) {
+  .testimonios-container{
+    padding-top:15px;
+  }
   .testimonio {
     display: flex;
     flex-direction: column;
