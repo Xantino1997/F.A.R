@@ -10,6 +10,34 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+const phoneNumber = "543462529718";
+
+
+const shareOnWhatsApp = () => {
+  const message = "Hola, escribo para contactarme con alguien de soporte.";
+
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    // Dispositivo móvil
+    window.open(
+      `whatsapp://send?phone=${phoneNumber}&text=${encodeURIComponent(
+        message
+      )}`,
+      "_blank"
+    );
+  } else {
+    // Computadora de escritorio
+    window.open(
+      `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+        message
+      )}`,
+      "_blank"
+    );
+  }
+};
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -34,7 +62,13 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a className="contacto-list-link" href="#">
+              <a
+                className="contacto-list-link"
+                href="#"
+                onClick={shareOnWhatsApp}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon icon={faWhatsapp} className="contactos" />
               </a>
             </li>
