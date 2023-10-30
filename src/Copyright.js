@@ -52,8 +52,8 @@ function Copyright() {
       {/* Agrega aquí los términos de servicio de F.A.R Servicios según las necesidades de la empresa */}
 
       <p className="disclaimer">
-        Debe personalizar según las
-        políticas y requisitos legales de la empresa.
+        Personalizar según las
+        políticas y requisitos de F.A.R
       </p>
     </div>
   );
