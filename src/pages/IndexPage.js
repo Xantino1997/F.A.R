@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./stylesPages/IndexPage.css";
-import Testimonio from "./Testimonios"
+import Testimonio from "./Testimonios";
 import grupo1 from "../assets/grup2.png";
 import grupo2 from "../assets/dobleImg.png";
 import grupo3 from "../assets/paneles.png";
@@ -10,17 +10,17 @@ const images = [
   {
     src: grupo1,
     description: "Experiencia y responsabilidad nos avalan",
-    id:"/productos",
+    id: "/productos",
   },
   {
     src: grupo2,
     description: "Potencia portátil",
-    id:"/productos",
+    id: "/productos",
   },
   {
     src: grupo3,
     description: "Energía sostenible",
-    id:"/productos",
+    id: "/productos",
   },
 ];
 
@@ -75,20 +75,22 @@ function Carousel() {
           </div>
         ))}
       </div>
-      <div className="select-image-div">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            className={`select-image ${
-              index === currentImage ? "active" : ""
-            }`}
-            src={image.src}
-            alt={`Select Image ${index + 1}`}
-            onClick={() => handleSelectImage(index)}
-          />
-        ))}
+      <div  className="select-div">
+        <div className="select-image-div">
+          {images.map((image, index) => (
+            <img
+              key={index}
+              className={`select-image ${
+                index === currentImage ? "active" : ""
+              }`}
+              src={image.src}
+              alt={`Select Image ${index + 1}`}
+              onClick={() => handleSelectImage(index)}
+            />
+          ))}
+        </div>
+        <Testimonio />
       </div>
-      <Testimonio/>
     </>
   );
 }
