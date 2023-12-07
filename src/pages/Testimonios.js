@@ -7,19 +7,19 @@ import cliente3Imagen from "../assets/testimonio3.png";
 const testimoniosData = [
   {
     imagen: cliente1Imagen,
-    nombre: "Banco Galicia:",
+    nombre: "Banco Galicia",
     descripcion:
       ' "La empresa F.A.R. es increíble, su servicio es de primera calidad y sus productos son confiables".',
   },
   {
     imagen: cliente2Imagen,
-    nombre: "Banco Frances:",
+    nombre: "Banco Frances",
     descripcion:
       ' "Los generadores eléctricos de F.A.R. me han ahorrado muchas veces en momentos de cortes de energía, ¡son altamente recomendables!".',
   },
   {
     imagen: cliente3Imagen,
-    nombre: "Sancor Seguros:",
+    nombre: "Sancor Seguros",
     descripcion:
       ' "No puedo expresar lo satisfecho que estoy con la atención al cliente y la eficiencia de los generadores de F.A.R. ¡Simplemente los mejores!".',
   },
@@ -40,7 +40,7 @@ function Testimonios() {
 
   return (
     <div className="testimonios-container">
-      <h1 className="testimonios-titulo">Clientes Satisfechos</h1>
+      <h1 className="testimonios-titulo">Trabajamos con:</h1>
       <div className="testimonios-unicos">
         {imagenVisible !== null && (
           <div className="testimonio-unico">
@@ -50,9 +50,9 @@ function Testimonios() {
               className="testimonio-imagen-unico"
             />
             <h4>{testimoniosData[imagenVisible].nombre}</h4>
-            <p className="testimonio-descripcion-unico">
+            {/* <p className="testimonio-descripcion-unico">
               {testimoniosData[imagenVisible].descripcion}
-            </p>
+            </p> */}
           </div>
         )}
       </div>
@@ -71,7 +71,7 @@ function Testimonios() {
               className="testimonio-imagen"
             />
             <h4>{testimonio.nombre}</h4>
-            <p className="testimonio-descripcion">{testimonio.descripcion}</p>
+            {/* <p className="testimonio-descripcion">{testimonio.descripcion}</p> */}
           </div>
         ))}
       </div>
