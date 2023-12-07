@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-const phoneNumber = "543462529718";
+const phoneNumber = "543415327122";
 
 
 const shareOnWhatsApp = () => {
@@ -57,7 +57,7 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a className="contacto-list-link" href="tel:03465499170">
+              <a className="contacto-list-link" href="tel:3415327122">
                 <FontAwesomeIcon icon={faPhone} className="contactos" />
               </a>
             </li>
@@ -98,7 +98,7 @@ function Footer() {
                 {/* <span className="social-text">Instagram</span> */}
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 className="redes-list-link"
                 href="https://www.youtube.com/" // Reemplaza con la URL de tu canal de YouTube
@@ -106,9 +106,9 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faYoutube} className="social-icon" />
-                {/* <span className="social-text">Youtube</span> */}
+                <span className="social-text">Youtube</span>
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
