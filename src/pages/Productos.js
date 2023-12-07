@@ -12,12 +12,42 @@ const MySwal = Swal;
 
 const Productos = () => {
   const [productos, setProductos] = useState([
-    { id: 1, nombre: "Generador electrico", imagen: grupo1 ,descripcion: "Generador electrico funcional"},
-    { id: 2, nombre: "Generador electrico color naranja", imagen: grupo2,descripcion: "Ideal para dias de camping" },
-    { id: 3, nombre: "Generador electrico color amarillo", imagen: grupo3,descripcion: "Facil manejo y transporte" },
-    { id: 4, nombre: "Generador familiar", imagen: grupo4,descripcion: "Energia eficiente y amigable con el medio ambiente" },
-    { id: 5, nombre: "Soporte integral", imagen: grupo5,descripcion: "Soporte eficiente e integral" },
-    { id: 6, nombre: "Generador electro base full", imagen: grupo6,descripcion: "Eficiente y potente ideal para el hogar" },
+    {
+      id: 1,
+      nombre: "Generador electrico",
+      imagen: grupo1,
+      descripcion: "Generador electrico funcional",
+    },
+    {
+      id: 2,
+      nombre: "Generador electrico color naranja",
+      imagen: grupo2,
+      descripcion: "Ideal para dias de camping",
+    },
+    {
+      id: 3,
+      nombre: "Generador electrico color amarillo",
+      imagen: grupo3,
+      descripcion: "Facil manejo y transporte",
+    },
+    {
+      id: 4,
+      nombre: "Generador familiar",
+      imagen: grupo4,
+      descripcion: "Energia eficiente y amigable con el medio ambiente",
+    },
+    {
+      id: 5,
+      nombre: "Soporte integral",
+      imagen: grupo5,
+      descripcion: "Soporte eficiente e integral",
+    },
+    {
+      id: 6,
+      nombre: "Generador electro base full",
+      imagen: grupo6,
+      descripcion: "Eficiente y potente ideal para el hogar",
+    },
     // Agrega más productos aquí
   ]);
   const [filtro, setFiltro] = useState("");
@@ -31,12 +61,12 @@ const Productos = () => {
 
   const filtrarProductos = () => {
     const filtroLower = filtro.toLowerCase(); // Convierte el filtro a minúsculas
-    const productosFiltrados = productos.filter((producto) =>
-      producto.nombre.toLowerCase().includes(filtroLower) // Convierte el nombre del producto a minúsculas antes de la comparación
+    const productosFiltrados = productos.filter(
+      (producto) => producto.nombre.toLowerCase().includes(filtroLower) // Convierte el nombre del producto a minúsculas antes de la comparación
     );
     setProductosFiltrados(productosFiltrados);
   };
-  
+
   const abrirModal = (producto) => {
     MySwal.fire({
       title: producto.nombre,
@@ -48,7 +78,7 @@ const Productos = () => {
       html: `
         <p>Descripción del producto:</p>
 
-        <p>${ producto.descripcion}</p>
+        <p>${producto.descripcion}</p>
       `,
     }).then((result) => {
       if (result.isConfirmed) {
@@ -106,6 +136,7 @@ const Productos = () => {
   return (
     <div className="conteiner-buscador">
       <h1 className="titulo-buscador">Buscador de Productos</h1>
+
       <input
         type="text"
         placeholder="Buscar por Nombre"
@@ -113,15 +144,24 @@ const Productos = () => {
         onChange={(e) => setFiltro(e.target.value)}
       />
       <button onClick={filtrarProductos}>Buscar</button>
-
+      <br />
+      <small style={{color:"red"}}>*Las imagenes son ilustrativas</small>
       <div className="productos-container">
         {productosAMostrar.map((producto) => (
           <div key={producto.nombre} className="producto">
             <h3>{producto.nombre}</h3>
             <img src={producto.imagen} alt={producto.nombre} />
             <div>
-              <button className="producto-btn" onClick={() => abrirModal(producto)}>Ampliar</button>
-              <button className="producto-btn" onClick={() => abrirWhatsApp(producto.nombre)}>
+              <button
+                className="producto-btn"
+                onClick={() => abrirModal(producto)}
+              >
+                Ampliar
+              </button>
+              <button
+                className="producto-btn"
+                onClick={() => abrirWhatsApp(producto.nombre)}
+              >
                 WhatsApp
               </button>
             </div>
