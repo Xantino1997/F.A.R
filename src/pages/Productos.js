@@ -87,7 +87,7 @@ const Productos = () => {
     });
   };
 
-  const numeroWhatsApp = "543465650158"; // Reemplaza con el número de WhatsApp deseado
+  const numeroWhatsApp = "543415327122"; // Reemplaza con el número de WhatsApp deseado
 
   const abrirWhatsApp = (nombreProducto) => {
     const message = `¡Hola! Estoy interesado en el producto: ${nombreProducto}`;
