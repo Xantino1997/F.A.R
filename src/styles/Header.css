@@ -13,7 +13,7 @@
   --color-black: #000;
 }
 .header {
-  background-color:red;
+  background-color: red;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -22,13 +22,12 @@
   width: 100%;
   z-index: 9;
   font-family: "Lato", sans-serif;
-
 }
-.links-header-ul{
-  background:white;
+.links-header-ul {
+  background: white;
   width: 100%;
   height: 100%;
-  z-index:999;
+  z-index: 999;
 }
 .autor-info-header-register {
   top: 30px;
@@ -43,7 +42,7 @@
 }
 
 .logo {
-  background:var(--color-naranja);
+  background: var(--color-naranja);
   /* opacity: 0.9; */
   align-items: center;
   display: flex;
@@ -52,7 +51,7 @@
   height: 9em;
   margin-top: -20px;
   margin-bottom: -20px;
-  padding:2px;
+  padding: 2px;
   margin-left: -20px;
   position: relative; /* Añadir posición relativa para que los pseudo-elementos sean relativos a este contenedor */
 }
@@ -60,12 +59,13 @@
   background: white;
   width: 100%;
   height: 80%;
-  padding-top:15px;
-  padding-left:15px;
+  padding-top: 15px;
+  padding-left: 15px;
   width: 100%;
-  top:-20px;
+  top: -20px;
   z-index: 999; /* Asegura que el elemento tenga un z-index */
   position: relative; /* Establece una posición relativa */
+
 }
 
 /* Pseudo-elemento para crear el efecto de corte en el margen derecho */
@@ -82,22 +82,20 @@
   z-index: 1; /* Asegura que el pseudo-elemento tenga un z-index inferior */
 }
 
-
-
 .logo-img {
   width: 18%;
-  height:8em;
-  border-radius:50%;
-  padding:0px;
-  top:-10px;
+  height: 8em;
+  border-radius: 50%;
+  padding: 0px;
+  top: -10px;
   opacity: 1;
   position: absolute;
   left: 200px;
   border: solid 3px red;
-  box-shadow:  0px 0px 10px red;
+  box-shadow: 0px 0px 10px red;
 }
 .logo-titulo {
-  top:90px;
+  top: 90px;
   position: absolute;
   text-align: center;
   width: 45%;
@@ -134,14 +132,16 @@
 
 .menu ul li a {
   color: var(--color-black);
+  color: white;
   text-decoration: none;
   padding: 8px;
   border-radius: 15px;
+color:red;
 }
 
 .menu ul li a:hover {
   text-decoration: underline;
-  background-color: rgba(0, 0, 0, 0.5);
+
 }
 
 .autor-info-header {
@@ -191,15 +191,11 @@
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-
-
 .autor-info-header-parrafo {
   border-radius: 5px;
   padding-left: 16px;
   padding-right: 16px;
 }
-
-
 
 .links-header-ul ul li a.active {
   /* Estilos para el enlace activo */
@@ -209,7 +205,7 @@
 /* Media Query para pantallas pequeñas, como smartphones------------------------------------------------------------------- */
 @media screen and (min-width: 120px) and (max-width: 767px) {
   .header {
-    background-color:red;
+    background-color: red;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -220,77 +216,74 @@
     font-family: "Roboto Condensed", sans-serif;
   }
 
-   
-.logo {
-  background:var(--color-naranja);
-  /* background:blue; */
-  /* opacity: 0.9; */
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  height: 8em;
-  margin-top: -20px;
-  margin-bottom: -20px;
-  margin-left: -110px;
-  position: relative; /* Añadir posición relativa para que los pseudo-elementos sean relativos a este contenedor */
-}
-.links-header-ul {
-  background: transparent;
-  width: 100%;
-  height: 80%;
-  padding-top:15px;
-  top:0px;
-  z-index: 999; /* Asegura que el elemento tenga un z-index */
-  position: relative; /* Establece una posición relativa */
-}
+  .logo {
+    background: var(--color-naranja);
+    /* background:blue; */
+    /* opacity: 0.9; */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 8em;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    margin-left: -110px;
+    position: relative; /* Añadir posición relativa para que los pseudo-elementos sean relativos a este contenedor */
+  }
+  .links-header-ul {
+    background: transparent;
+    width: 100%;
+    height: 80%;
+    padding-top: 15px;
+    top: 0px;
+    z-index: 999; /* Asegura que el elemento tenga un z-index */
+    position: relative; /* Establece una posición relativa */
+  }
 
-/* Pseudo-elemento para crear el efecto de corte en el margen derecho */
-.logo::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -80px;
-  width: 90px;
-  height: 100%;
-  background-color: red;
-  transform: skewX(30deg);
-  transform-origin: bottom;
-  z-index: 1; /* Asegura que el pseudo-elemento tenga un z-index inferior */
-}
+  /* Pseudo-elemento para crear el efecto de corte en el margen derecho */
+  .logo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -80px;
+    width: 90px;
+    height: 100%;
+    background-color: red;
+    transform: skewX(30deg);
+    transform-origin: bottom;
+    z-index: 1; /* Asegura que el pseudo-elemento tenga un z-index inferior */
+  }
 
-.logo-img {
-  width: 25%;
-  height:5em;
-  /* opacity: 1; */
-  position: absolute;
-  top: -2px;
-  left: 8%;
-}
-.logo-titulo {
-  width: 35%;
-  height:3%;
-  background:#fff;
-  opacity: 1;
-  position: relative;
-  top:240px;
-  z-index:22;
-  color: #000;
-  font-size:12px;
-  border-radius:5px;
-  left:35%;
-  animation: encender 2s ease-in-out forwards; /* Nombre de la animación, duración, temporización y retención final */
-}
-
+  .logo-img {
+    width: 25%;
+    height: 5em;
+    /* opacity: 1; */
+    position: absolute;
+    top: -2px;
+    left: 8%;
+  }
+  .logo-titulo {
+    width: 35%;
+    height: 3%;
+    background: #fff;
+    opacity: 1;
+    position: relative;
+    top: 240px;
+    z-index: 22;
+    color: #000;
+    font-size: 12px;
+    border-radius: 5px;
+    left: 35%;
+    animation: encender 2s ease-in-out forwards; /* Nombre de la animación, duración, temporización y retención final */
+  }
 
   .autor-info-header-register {
     top: 30px;
   }
-  
+
   .btn-menu-header {
     display: none;
   }
-  
 
   /* Estilos para el botón del menú */
   .btn-menu-header {
@@ -305,24 +298,23 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    color:#fff;
+    color: #fff;
     font-weight: bold;
-    z-index:5000;
+    z-index: 5000;
   }
   .btn-menu-header-open {
     position: absolute;
     top: 20px;
     color: var(--color-naranja);
     right: 20px;
-    display: flex;    
+    display: flex;
     background-color: transparent;
     padding: 10px;
     height: 50px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    color:white !important;
-
+    color: white !important;
   }
 
   /* Estilos para el menú */
@@ -330,10 +322,10 @@
     display: flex;
     flex-direction: column;
     width: 98%;
-    height:130%;
+    height: 130%;
     display: block;
     top: 0%;
-    left:0%;
+    left: 0%;
     position: absolute;
     margin: 0 auto;
     border: none;
@@ -428,7 +420,7 @@
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    color:red;
+    color: red;
   }
 
   .menu ul li a:hover {
@@ -438,23 +430,23 @@
   }
 
   .autor-info-header {
-    width: 100%; 
+    width: 100%;
     font-size: 12px;
   }
 
   .autor-info-header:hover::before {
     width: 80px;
     height: 100px;
-    top: 10px; 
-    font-size: 10px; 
+    top: 10px;
+    font-size: 10px;
     z-index: 6;
   }
 }
 
 /* Media Query para pantallas pequeñas, como smartphones------------------------------------------------------------------- */
-@media screen and (min-width: 767px) and (max-width: 1197px){
+@media screen and (min-width: 767px) and (max-width: 1197px) {
   .header {
-    background-color:red;
+    background-color: red;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -469,17 +461,17 @@
   .autor-info-header-register {
     top: 30px;
   }
-  
+
   .btn-menu-header {
     display: none;
   }
-  
+
   .btn-menu-header-open {
     display: none;
   }
-  
+
   .logo {
-    background:var(--color-naranja);
+    background: var(--color-naranja);
     opacity: 0.9;
     align-items: center;
     display: flex;
@@ -494,16 +486,16 @@
   .links-header-ul {
     background: white;
     height: 80%;
-    padding-top:15px;
-    padding-left:10px;
+    padding-top: 15px;
+    padding-left: 10px;
     width: 95%;
-    top:-20px;
+    top: -20px;
     margin-right: 12px;
     font-size: 14px;
     z-index: 999; /* Asegura que el elemento tenga un z-index */
     position: relative; /* Establece una posición relativa */
   }
-  
+
   /* Pseudo-elemento para crear el efecto de corte en el margen derecho */
   .logo::after {
     content: "";
@@ -517,14 +509,14 @@
     transform-origin: bottom;
     z-index: 1; /* Asegura que el pseudo-elemento tenga un z-index inferior */
   }
-  
+
   .logo-img {
     width: 30%;
-    height:5em;
+    height: 5em;
     opacity: 1;
     position: absolute;
     top: -2px;
-    left:50px;
+    left: 50px;
   }
   .logo-titulo {
     top: 70px;
@@ -534,9 +526,9 @@
     color: #fff;
     margin-bottom: 10px;
     opacity: 0; /* Inicialmente invisible */
-    animation: encender 2s ease-in-out forwards; 
+    animation: encender 2s ease-in-out forwards;
   }
-  
+
   @keyframes encender {
     0% {
       opacity: 0; /* Al principio, completamente invisible */
@@ -545,36 +537,36 @@
       opacity: 1; /* Al final, completamente visible */
     }
   }
-  
+
   .menu {
     margin-top: 10px;
-    color:#000;
+    color: #000;
   }
-  
+
   .menu ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
   }
-  
+
   .menu ul li {
     font-weight: bold;
     margin-right: 30px;
   }
-  
+
   .menu ul li a {
     color: var(--color-black);
     text-decoration: none;
     padding: 8px;
     border-radius: 15px;
   }
-  
+
   .menu ul li a:hover {
     text-decoration: underline;
     background-color: rgba(0, 0, 0, 0.5);
   }
-  
+
   .autor-info-header {
     border: 1px solid #ccc;
     text-align: center;
@@ -589,7 +581,7 @@
     background-color: rgba(100, 20, 100, 0.6);
     border-radius: 5px;
   }
-  
+
   /* Estilos para la imagen de perfil */
   .autor-info-header-img {
     width: 60px;
@@ -601,7 +593,7 @@
     margin-top: 10px !important;
     display: block;
   }
-  
+
   /* Estilos para el pseudo-elemento cuando se haga hover */
   .autor-info-header:hover::before {
     content: "";
@@ -621,14 +613,10 @@
     position: absolute;
     background-color: rgba(0, 0, 0, 0.6);
   }
-  
-  
-  
+
   .autor-info-header-parrafo {
     border-radius: 5px;
     padding-left: 16px;
     padding-right: 16px;
   }
-  
-  
 }
