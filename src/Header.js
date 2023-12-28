@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate,Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import "./styles/Header.css";
 import logo from "./assets/farservicios2.png";
-// import logo from "./assets/F.A.R.png";
 
 import { UserContext } from "./UserContext";
 import { useContext } from "react";
@@ -42,7 +41,7 @@ function Header() {
         timer: 5000,
         showConfirmButton: false,
       }).then(() => {
-        setUserInfo(""); 
+        setUserInfo("");
         navigate("/redirigiendo");
       });
     } catch (error) {
@@ -84,7 +83,7 @@ function Header() {
   };
 
   const handleMenuItemClick = () => {
-    setIsMenuOpen(false); 
+    setIsMenuOpen(false);
   };
 
   return (
@@ -102,51 +101,80 @@ function Header() {
         <div className="links-header-ul">
           <ul>
             <li>
-              <Link to="/" onClick={handleMenuItemClick}>
+              <NavLink
+                to="/"
+                exact
+                activeClassName="active"
+                onClick={handleMenuItemClick}
+              >
                 Inicio
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/nosotros" onClick={handleMenuItemClick}>
+              <NavLink
+                to="/nosotros"
+                activeClassName="active"
+                onClick={handleMenuItemClick}
+              >
                 Sobre Nosotros
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/contactanos" onClick={handleMenuItemClick}>
-                Contactanos
-              </Link>
+              <NavLink
+                to="/contactanos"
+                activeClassName="active"
+                onClick={handleMenuItemClick}
+              >
+                Contáctanos
+              </NavLink>
             </li>
             <li>
-              <Link to="/servicios" onClick={handleMenuItemClick}>
+              <NavLink
+                to="/servicios"
+                activeClassName="active"
+                onClick={handleMenuItemClick}
+              >
                 Servicios
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/productos" onClick={handleMenuItemClick}>
+              <NavLink
+                to="/productos"
+                activeClassName="active"
+                onClick={handleMenuItemClick}
+              >
                 Productos
-              </Link>
+              </NavLink>
             </li>
             {username && (
               <>
                 <li>
-                  <Link to="/agrega-producto" onClick={handleMenuItemClick}>
+                  <NavLink
+                    to="/agrega-producto"
+                    activeClassName="active"
+                    onClick={handleMenuItemClick}
+                  >
                     Agregar Producto
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/crear-post" onClick={handleMenuItemClick}>
+                  <NavLink
+                    to="/crear-post"
+                    activeClassName="active"
+                    onClick={handleMenuItemClick}
+                  >
                     Crear Noticias
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
                   <Link
                     to="/#"
                     onClick={() => {
                       logout();
-                      handleMenuItemClick(); 
+                      handleMenuItemClick();
                     }}
                   >
-                    Logout
+                    Cerrar Sesión
                   </Link>
                 </li>
                 <div className="autor-info-header">
